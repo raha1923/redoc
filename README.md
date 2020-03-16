@@ -15,7 +15,8 @@
 
 ![ReDoc demo](https://raw.githubusercontent.com/Redocly/redoc/master/demo/redoc-demo.png)
 
-## [Live demo](http://redocly.github.io/redoc/)
+## [Live demo](http://raha1923.github.io/redoc/)
+<!-- Please publish to Github pages -->
 
 [<img alt="Deploy to Github" src="http://i.imgur.com/YZmaqk3.png" height="60px">](https://github.com/Rebilly/generator-openapi-repo#generator-openapi-repo--) [<img alt="ReDoc as a service" src="http://i.imgur.com/edqdCv6.png" height="60px">](https://redoc.ly) [<img alt="Customization services" src="http://i.imgur.com/c4sUF7M.png" height="60px">](https://redoc.ly/#services)
 
@@ -58,7 +59,7 @@ Additionally, all the 1.x releases are hosted on our GitHub Pages-based CDN **(d
 
 ## Version Guidance
 | ReDoc Release | OpenAPI Specification |
-|:--------------|:----------------------|
+| :------------ | :-------------------- |
 | 2.0.0-alpha.x | 3.0, 2.0              |
 | 1.19.x        | 2.0                   |
 | 1.18.x        | 2.0                   |
