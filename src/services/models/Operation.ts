@@ -1,4 +1,4 @@
-import { action, observable } from 'mobx';
+import { action, observable, makeObservable } from 'mobx';
 
 import { IMenuItem } from '../MenuStore';
 import { GroupModel } from './Group.model';
@@ -84,6 +84,7 @@ export class OperationModel implements IMenuItem {
     parent: GroupModel | undefined,
     private options: RedocNormalizedOptions,
   ) {
+    makeObservable(this);
     this.pointer = JsonPointer.compile(['paths', operationSpec.pathName, operationSpec.httpVerb]);
 
     this.id =
