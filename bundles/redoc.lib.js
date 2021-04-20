@@ -122,13 +122,13 @@ module.exports = require("polished");
 /* 3 */
 /***/ (function(module, exports) {
 
-module.exports = require("mobx-react");
+module.exports = require("mobx");
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = require("mobx");
+module.exports = require("mobx-react");
 
 /***/ }),
 /* 5 */
@@ -6449,7 +6449,7 @@ module.exports = require("prismjs/components/prism-swift.js");
 				var addMethods = __webpack_require__(80)
 				var methods = ["add","done","toJS","load","search"]
 				module.exports = function() {
-					var w = new Worker(__webpack_require__.p + "408a0c45585d9a8c264d.worker.js", { name: "[hash].worker.js" })
+					var w = new Worker(__webpack_require__.p + "15a1a2e09c3e99b89f06.worker.js", { name: "[hash].worker.js" })
 					addMethods(w, methods)
 					
 					return w
@@ -7412,7 +7412,7 @@ var ErrorBoundary_ErrorBoundary = /** @class */ (function (_super) {
                 external_react_["createElement"]("br", null),
                 external_react_["createElement"]("small", null,
                     " Commit: ",
-                    "135839d3"));
+                    "f98cfa64"));
         }
         return external_react_["Children"].only(this.props.children);
     };
@@ -7469,10 +7469,11 @@ var OptionsProvider = OptionsContext.Provider;
 var OptionsConsumer = OptionsContext.Consumer;
 
 // EXTERNAL MODULE: external "mobx"
-var external_mobx_ = __webpack_require__(4);
+var external_mobx_ = __webpack_require__(3);
 
 // EXTERNAL MODULE: external "json-schema-ref-parser"
 var external_json_schema_ref_parser_ = __webpack_require__(36);
+var external_json_schema_ref_parser_default = /*#__PURE__*/__webpack_require__.n(external_json_schema_ref_parser_);
 
 // EXTERNAL MODULE: ./node_modules/swagger2openapi/index.js
 var swagger2openapi = __webpack_require__(37);
@@ -7488,7 +7489,7 @@ function loadAndBundleSpec(specUrlOrObject) {
         return Object(external_tslib_["__generator"])(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    parser = new external_json_schema_ref_parser_();
+                    parser = new external_json_schema_ref_parser_default.a();
                     return [4 /*yield*/, parser.bundle(specUrlOrObject, {
                             resolve: {
                                 http: {
@@ -7535,6 +7536,7 @@ var external_decko_ = __webpack_require__(14);
 
 // EXTERNAL MODULE: external "eventemitter3"
 var external_eventemitter3_ = __webpack_require__(19);
+var external_eventemitter3_default = /*#__PURE__*/__webpack_require__.n(external_eventemitter3_);
 
 // EXTERNAL MODULE: external "json-pointer"
 var external_json_pointer_ = __webpack_require__(6);
@@ -8412,6 +8414,7 @@ if (false) {}
 
 // EXTERNAL MODULE: external "mark.js"
 var external_mark_js_ = __webpack_require__(22);
+var external_mark_js_default = /*#__PURE__*/__webpack_require__.n(external_mark_js_);
 
 // CONCATENATED MODULE: ./src/services/MarkerService.ts
 
@@ -8421,7 +8424,7 @@ var MarkerService_MarkerService = /** @class */ (function () {
         this.prevTerm = '';
     }
     MarkerService.prototype.add = function (el) {
-        this.map.set(el, new external_mark_js_(el));
+        this.map.set(el, new external_mark_js_default.a(el));
     };
     MarkerService.prototype.delete = function (el) {
         this.map.delete(el);
@@ -8437,7 +8440,7 @@ var MarkerService_MarkerService = /** @class */ (function () {
         for (var _i = 0, elements_1 = elements; _i < elements_1.length; _i++) {
             var el = elements_1[_i];
             if (!this.map.has(el)) {
-                this.map.set(el, new external_mark_js_(el));
+                this.map.set(el, new external_mark_js_default.a(el));
             }
         }
     };
@@ -8466,13 +8469,14 @@ var MarkerService_MarkerService = /** @class */ (function () {
 
 // EXTERNAL MODULE: external "marked"
 var external_marked_ = __webpack_require__(15);
+var external_marked_default = /*#__PURE__*/__webpack_require__.n(external_marked_);
 
 // CONCATENATED MODULE: ./src/services/MarkdownRenderer.ts
 
 
 
-var MarkdownRenderer_renderer = new external_marked_["Renderer"]();
-external_marked_["setOptions"]({
+var MarkdownRenderer_renderer = new external_marked_default.a.Renderer();
+external_marked_default.a.setOptions({
     renderer: MarkdownRenderer_renderer,
     highlight: function (str, lang) {
         return highlight(str, lang);
@@ -8499,7 +8503,7 @@ var MarkdownRenderer_MarkdownRenderer = /** @class */ (function () {
             }
             return _this.originalHeadingRule(text, level, raw, slugger);
         };
-        this.headingEnhanceRenderer = new external_marked_["Renderer"]();
+        this.headingEnhanceRenderer = new external_marked_default.a.Renderer();
         this.originalHeadingRule = this.headingEnhanceRenderer.heading.bind(this.headingEnhanceRenderer);
         this.headingEnhanceRenderer.heading = this.headingRule;
     }
@@ -8565,7 +8569,7 @@ var MarkdownRenderer_MarkdownRenderer = /** @class */ (function () {
         var opts = extractHeadings ? {
             renderer: this.headingEnhanceRenderer
         } : undefined;
-        var res = external_marked_(rawText.toString(), opts);
+        var res = external_marked_default()(rawText.toString(), opts);
         return res;
     };
     MarkdownRenderer.prototype.extractHeadings = function (rawText) {
@@ -8687,6 +8691,7 @@ var ApiInfo_ApiInfoModel = /** @class */ (function () {
 var SecuritySchemes_SecuritySchemeModel = /** @class */ (function () {
     function SecuritySchemeModel(parser, id, scheme) {
         this.token = '';
+        Object(external_mobx_["makeObservable"])(this);
         var info = parser.deref(scheme);
         this.id = id;
         this.sectionId = SECURITY_SCHEMES_SECTION_PREFIX + id;
@@ -8724,6 +8729,7 @@ var SecuritySchemes_SecuritySchemeModel = /** @class */ (function () {
 
 var SecuritySchemes_SecuritySchemesModel = /** @class */ (function () {
     function SecuritySchemesModel(parser) {
+        Object(external_mobx_["makeObservable"])(this);
         var schemes = parser.spec.components && parser.spec.components.securitySchemes || {};
         this.schemes = Object.keys(schemes).map(function (name) { return new SecuritySchemes_SecuritySchemeModel(parser, name, schemes[name]); });
     }
@@ -9044,7 +9050,7 @@ var Group_model_GroupModel = /** @class */ (function () {
         this.items = [];
         this.active = false;
         this.expanded = false;
-        // markdown headings already have ids calculated as they are needed for heading anchors
+        Object(external_mobx_["makeObservable"])(this); // markdown headings already have ids calculated as they are needed for heading anchors
         this.id = tagOrGroup.id || type + '/' + safeSlugify(tagOrGroup.name);
         this.type = type;
         this.name = tagOrGroup['x-displayName'] || tagOrGroup.name;
@@ -9138,6 +9144,7 @@ var Schema_SchemaModel = /** @class */ (function () {
         this.typePrefix = '';
         this.isCircular = false;
         this.activeOneOf = 0;
+        Object(external_mobx_["makeObservable"])(this);
         this.pointer = schemaOrRef.$ref || pointer || '';
         this.rawSchema = parser.deref(schemaOrRef);
         this.schema = parser.mergeAllOf(this.rawSchema, this.pointer, isChild);
@@ -9364,6 +9371,7 @@ var Field_FieldModel = /** @class */ (function () {
     function FieldModel(parser, infoOrRef, pointer, options) {
         this.expanded = false;
         this.$value = '';
+        Object(external_mobx_["makeObservable"])(this);
         var info = parser.deref(infoOrRef);
         this.kind = infoOrRef.kind || 'field';
         this.name = infoOrRef.name || info.name;
@@ -9544,6 +9552,7 @@ var MediaContent_MediaContentModel = /** @class */ (function () {
     function MediaContentModel(parser, info, isRequestType, options) {
         this.isRequestType = isRequestType;
         this.activeMimeIdx = 0;
+        Object(external_mobx_["makeObservable"])(this);
         if (options.unstable_ignoreMimeParameters) {
             info = mergeSimilarMediaTypes(info);
         }
@@ -9612,6 +9621,7 @@ var RequestBody_RequestBodyModel = /** @class */ (function () {
 var Response_ResponseModel = /** @class */ (function () {
     function ResponseModel(parser, code, defaultAsError, infoOrRef, options) {
         this.headers = [];
+        Object(external_mobx_["makeObservable"])(this);
         this.expanded = options.expandResponses === 'all' || options.expandResponses[code];
         var info = parser.deref(infoOrRef);
         parser.exitRef(infoOrRef);
@@ -9673,6 +9683,7 @@ var Operation_OperationModel = /** @class */ (function () {
         this.ready = true;
         this.active = false;
         this.expanded = false; //#endregion
+        Object(external_mobx_["makeObservable"])(this);
         this.pointer = JsonPointer_JsonPointer.compile(['paths', operationSpec.pathName, operationSpec.httpVerb]);
         this.id = operationSpec.operationId !== undefined ? 'operation/' + operationSpec.operationId : parent !== undefined ? parent.id + this.pointer : this.pointer;
         this.name = getOperationSummary(operationSpec);
@@ -10071,6 +10082,7 @@ var MenuStore_MenuStore = /** @class */ (function () {
         this.getItemById = function (id) {
             return _this.flatItems.find(function (item) { return item.id === id; });
         };
+        Object(external_mobx_["makeObservable"])(this);
         this.items = spec.contentItems;
         this.flatItems = flattenByProp(this.items || [], 'items');
         this.flatItems.forEach(function (item, idx) { return item.absoluteIdx = idx; });
@@ -10227,7 +10239,7 @@ var ScrollService_ScrollService = /** @class */ (function () {
         this.options = options;
         this._prevOffsetY = 0;
         this._scrollParent = IS_BROWSER ? window : undefined;
-        this._emiter = new external_eventemitter3_();
+        this._emiter = new external_eventemitter3_default.a();
         this.bind();
     }
     ScrollService.prototype.bind = function () {
@@ -11507,7 +11519,7 @@ var SamplesWrapper = styled_components.div(MediaTypeSamples_templateObject_1 || 
 var MediaTypeSamples_templateObject_1;
 
 // EXTERNAL MODULE: external "mobx-react"
-var external_mobx_react_ = __webpack_require__(3);
+var external_mobx_react_ = __webpack_require__(4);
 
 // CONCATENATED MODULE: ./src/common-elements/fields.ts
 

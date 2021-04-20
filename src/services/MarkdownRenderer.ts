@@ -1,4 +1,4 @@
-import * as marked from 'marked';
+import marked from 'marked';
 
 import { highlight, safeSlugify, unescapeHTMLChars } from '../utils';
 import { AppStore } from './AppStore';

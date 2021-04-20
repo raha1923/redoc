@@ -1,4 +1,4 @@
-import * as Mark from 'mark.js';
+import Mark from 'mark.js';
 
 export class MarkerService {
   map: Map<Element, Mark> = new Map();
