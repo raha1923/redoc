@@ -4,6 +4,9 @@ import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import { compact } from 'lodash';
 import { resolve } from 'path';
 import * as webpack from 'webpack';
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const VERSION = JSON.stringify(require('../package.json').version);
 const REVISION = JSON.stringify(
@@ -61,15 +64,15 @@ let https = false;
 //we are using our own proxy here
 if (process.env.PROXY && process.env.USERNAME && process.env.PASSWORD) {
   proxy = {
-    "/api": {
+    '/api': {
       auth: `${process.env.USERNAME}:${process.env.PASSWORD}`,
       target: process.env.PROXY,
-      "secure": false,
+      secure: false,
       changeOrigin: true,
       ws: true,
-      xfwd: true
-    }
-  }
+      xfwd: true,
+    },
+  };
   https = true;
   console.log('Using proxy configuration provided with command line, https in use.\n');
 } else {
