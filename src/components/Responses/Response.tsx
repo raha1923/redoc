@@ -5,14 +5,24 @@ import { ResponseModel } from '../../services/models';
 import { ResponseDetails } from './ResponseDetails';
 import { ResponseDetailsWrap, StyledResponseTitle } from './styled.elements';
 
+interface State {
+  expanded: boolean;
+}
 @observer
-export class ResponseView extends React.Component<{ response: ResponseModel }> {
+export class ResponseView extends React.Component<{ response: ResponseModel }, State> {
+  constructor(props: { response: ResponseModel }) {
+    super(props);
+    this.state = {
+      expanded: !!this.props.response.headers.length,
+    };
+  }
   toggle = () => {
-    this.props.response.toggle();
+    this.setState({ expanded: !this.state.expanded });
   };
 
   render() {
-    const { headers, type, summary, description, code, expanded, content } = this.props.response;
+    const { headers, type, summary, description, code, content } = this.props.response;
+    const { expanded } = this.state;
     const mimes =
       content === undefined ? [] : content.mediaTypes.filter(mime => mime.schema !== undefined);
 
