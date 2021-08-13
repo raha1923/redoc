@@ -1,5 +1,6 @@
 import { observer } from 'mobx-react';
 import * as React from 'react';
+import { CookieStorage } from 'cookie-storage';
 import { SubmitButton } from '../../common-elements/buttons';
 import { FlexLayoutReverse } from '../../common-elements/panels';
 import { FieldModel, OperationModel, SecuritySchemeModel, SecuritySchemesModel } from '../../services/models';
@@ -8,6 +9,7 @@ import { ConsoleEditor } from './ConsoleEditor';
 
 const qs = require('qs');
 
+const cookieStorage = new CookieStorage();
 export interface ConsoleViewerProps {
   operation: OperationModel;
   additionalHeaders?: object;
@@ -40,7 +42,7 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
   }
   onClickSend = async () => {
     const ace = this.consoleEditor && this.consoleEditor.editor;
-    const { operation, securitySchemes: {schemes}, additionalHeaders = {}, urlIndex = 0 } = this.props;
+    const { operation, securitySchemes: { schemes }, additionalHeaders = {}, urlIndex = 0 } = this.props;
 
     let value = ace && ace.editor.getValue();
 
@@ -63,7 +65,7 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
 
     const securityHeaders: Dict<string | undefined> = {};
 
-    operation.security.forEach(({schemes: [{ id }]}) => {
+    operation.security.forEach(({ schemes: [{ id }] }) => {
       if (schemeMapper.has(id)) {
         // this part of code needs a ts-ignore because typescript couldn't detect that schemeMapper.get(id) -
         // has been checked to avoid token of undefined.
@@ -116,6 +118,11 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
       const myHeaders = new Headers();
       for (const [key, value] of Object.entries(headers)) {
         myHeaders.append(key, `${value}`);
+      }
+
+      const token = cookieStorage.getItem("oidcIdToken");
+      if (token) {
+        myHeaders.append('X-Catalog-Source', token);
       }
 
       const request = new Request(url, {
