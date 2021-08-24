@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Switch from 'react-switch';
-import {FlexLayout} from './index';
+import { FlexLayout } from './index';
 
 import styled from '../styled-components';
 
@@ -13,7 +13,7 @@ interface LabelProps {
 }
 
 const Label = styled.label<LabelProps>`
-  color: ${props => props.active ? props.theme.colors.success.main : props.theme.colors.text.secondary}
+  color: ${props => props.active ? props.theme.colors.success.main : props.theme.colors.text.secondary};
   margin-left: 10px;
   font-size: 120%;
 `;
