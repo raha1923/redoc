@@ -10,7 +10,8 @@ export const Button = styled.button`
 `;
 
 export const SubmitButton = styled(Button)`
-  background: ${props => props.theme.colors.primary.main}
+  background: #ffc34e;
+  color: #263238;
   padding: 10px 30px;
   border-radius: 4px;
   cursor: pointer;
