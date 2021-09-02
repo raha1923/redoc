@@ -5,12 +5,9 @@ const Container = styled.div`
   position: relative;
 `;
 
-type ButtonProps = {
-  active: boolean;
-  onClick: () => void;
-};
-
-const Button = styled.button<ButtonProps>`
+const Button = styled.button<{
+  active: boolean
+}>`
   transform: rotate(270deg);
   position: absolute;
   top: -20px;

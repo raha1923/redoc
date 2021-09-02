@@ -1,7 +1,7 @@
 /*!
  * ReDoc - OpenAPI/Swagger-generated API Reference Documentation
  * -------------------------------------------------------------
- *   Version: "2.0.0-rc.23"
+ *   Version: "2.0.0-rc.24"
  *   Repo: https://github.com/Redocly/redoc
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -97,7 +97,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 90);
+/******/ 	return __webpack_require__(__webpack_require__.s = 89);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -499,7 +499,7 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(16)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17)))
 
 /***/ }),
 /* 13 */
@@ -511,16 +511,22 @@ module.exports = require("prop-types");
 /* 14 */
 /***/ (function(module, exports) {
 
-module.exports = require("decko");
+module.exports = require("styled-components");
 
 /***/ }),
 /* 15 */
 /***/ (function(module, exports) {
 
-module.exports = require("marked");
+module.exports = require("decko");
 
 /***/ }),
 /* 16 */
+/***/ (function(module, exports) {
+
+module.exports = require("marked");
+
+/***/ }),
+/* 17 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -710,7 +716,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -814,7 +820,7 @@ module.exports = {
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -920,13 +926,13 @@ module.exports = {
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 module.exports = require("eventemitter3");
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -940,12 +946,12 @@ module.exports = {
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var jpescape = __webpack_require__(17).jpescape;
+var jpescape = __webpack_require__(18).jpescape;
 function defaultState() {
     return {
         path: '#',
@@ -1004,40 +1010,40 @@ module.exports = {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports = require("mark.js");
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = require("openapi-sampler");
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 module.exports = require("perfect-scrollbar");
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(83)(false);
+exports = module.exports = __webpack_require__(82)(false);
 // Module
 exports.push([module.i, "/*\n * Container style\n */\n.ps {\n  overflow: hidden !important;\n  overflow-anchor: none;\n  -ms-overflow-style: none;\n  touch-action: auto;\n  -ms-touch-action: auto;\n}\n\n/*\n * Scrollbar rail styles\n */\n.ps__rail-x {\n  display: none;\n  opacity: 0;\n  transition: background-color .2s linear, opacity .2s linear;\n  -webkit-transition: background-color .2s linear, opacity .2s linear;\n  height: 15px;\n  /* there must be 'bottom' or 'top' for ps__rail-x */\n  bottom: 0px;\n  /* please don't change 'position' */\n  position: absolute;\n}\n\n.ps__rail-y {\n  display: none;\n  opacity: 0;\n  transition: background-color .2s linear, opacity .2s linear;\n  -webkit-transition: background-color .2s linear, opacity .2s linear;\n  width: 15px;\n  /* there must be 'right' or 'left' for ps__rail-y */\n  right: 0;\n  /* please don't change 'position' */\n  position: absolute;\n}\n\n.ps--active-x > .ps__rail-x,\n.ps--active-y > .ps__rail-y {\n  display: block;\n  background-color: transparent;\n}\n\n.ps:hover > .ps__rail-x,\n.ps:hover > .ps__rail-y,\n.ps--focus > .ps__rail-x,\n.ps--focus > .ps__rail-y,\n.ps--scrolling-x > .ps__rail-x,\n.ps--scrolling-y > .ps__rail-y {\n  opacity: 0.6;\n}\n\n.ps .ps__rail-x:hover,\n.ps .ps__rail-y:hover,\n.ps .ps__rail-x:focus,\n.ps .ps__rail-y:focus,\n.ps .ps__rail-x.ps--clicking,\n.ps .ps__rail-y.ps--clicking {\n  background-color: #eee;\n  opacity: 0.9;\n}\n\n/*\n * Scrollbar thumb styles\n */\n.ps__thumb-x {\n  background-color: #aaa;\n  border-radius: 6px;\n  transition: background-color .2s linear, height .2s ease-in-out;\n  -webkit-transition: background-color .2s linear, height .2s ease-in-out;\n  height: 6px;\n  /* there must be 'bottom' for ps__thumb-x */\n  bottom: 2px;\n  /* please don't change 'position' */\n  position: absolute;\n}\n\n.ps__thumb-y {\n  background-color: #aaa;\n  border-radius: 6px;\n  transition: background-color .2s linear, width .2s ease-in-out;\n  -webkit-transition: background-color .2s linear, width .2s ease-in-out;\n  width: 6px;\n  /* there must be 'right' for ps__thumb-y */\n  right: 2px;\n  /* please don't change 'position' */\n  position: absolute;\n}\n\n.ps__rail-x:hover > .ps__thumb-x,\n.ps__rail-x:focus > .ps__thumb-x,\n.ps__rail-x.ps--clicking .ps__thumb-x {\n  background-color: #999;\n  height: 11px;\n}\n\n.ps__rail-y:hover > .ps__thumb-y,\n.ps__rail-y:focus > .ps__thumb-y,\n.ps__rail-y.ps--clicking .ps__thumb-y {\n  background-color: #999;\n  width: 11px;\n}\n\n/* MS supports */\n@supports (-ms-overflow-style: none) {\n  .ps {\n    overflow: auto !important;\n  }\n}\n\n@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {\n  .ps {\n    overflow: auto !important;\n  }\n}\n", ""]);
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1165,10 +1171,10 @@ module.exports = {
     sanitiseAll: sanitiseAll
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(16)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17)))
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1182,9 +1188,9 @@ module.exports = {
 
 
 
-var base64 = __webpack_require__(52)
-var ieee754 = __webpack_require__(53)
-var isArray = __webpack_require__(54)
+var base64 = __webpack_require__(51)
+var ieee754 = __webpack_require__(52)
+var isArray = __webpack_require__(53)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -2965,7 +2971,7 @@ function isnan (val) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(11)))
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableStream)
@@ -3045,18 +3051,18 @@ xhr = null // Help gc
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(11)))
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = require("inherits");
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(process, Buffer, global) {var capability = __webpack_require__(29)
-var inherits = __webpack_require__(30)
-var stream = __webpack_require__(32)
+/* WEBPACK VAR INJECTION */(function(process, Buffer, global) {var capability = __webpack_require__(30)
+var inherits = __webpack_require__(31)
+var stream = __webpack_require__(33)
 
 var rStates = exports.readyStates = {
 	UNSENT: 0,
@@ -3279,16 +3285,16 @@ IncomingMessage.prototype._onXHRProgress = function () {
 	}
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(16), __webpack_require__(28).Buffer, __webpack_require__(11)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(29).Buffer, __webpack_require__(11)))
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = require("readable-stream");
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3306,7 +3312,7 @@ __webpack_require__.r(__webpack_exports__);
 
 try {
     // tslint:disable-next-line
-    __webpack_require__(82); // bundle into worker
+    __webpack_require__(81); // bundle into worker
 }
 catch (_) { } // nope
 /* just for better typings */
@@ -3409,16 +3415,10 @@ function search(q, limit) {
 
 
 /***/ }),
-/* 34 */
-/***/ (function(module, exports) {
-
-module.exports = require("slugify");
-
-/***/ }),
 /* 35 */
 /***/ (function(module, exports) {
 
-module.exports = require("styled-components");
+module.exports = require("slugify");
 
 /***/ }),
 /* 36 */
@@ -3434,23 +3434,23 @@ module.exports = require("json-schema-ref-parser");
 // @ts-check
 
 var tslib_1 = __webpack_require__(1);
-var fs = __webpack_require__(26);
+var fs = __webpack_require__(27);
 var url = __webpack_require__(5);
 var pathlib = __webpack_require__(12);
-var maybe = __webpack_require__(45);
+var maybe = __webpack_require__(44);
 var fetch = __webpack_require__(10);
 var yaml = __webpack_require__(10);
-var jptr = __webpack_require__(17);
+var jptr = __webpack_require__(18);
 var resolveInternal = jptr.jptr;
-var isRef = __webpack_require__(20).isRef;
-var clone = __webpack_require__(18).clone;
-var cclone = __webpack_require__(18).circularClone;
-var recurse = __webpack_require__(21).recurse;
-var resolver = __webpack_require__(46);
-var sw = __webpack_require__(48);
-var common = __webpack_require__(27);
-var statusCodes = __webpack_require__(49).statusCodes;
-var ourVersion = __webpack_require__(58).version;
+var isRef = __webpack_require__(21).isRef;
+var clone = __webpack_require__(19).clone;
+var cclone = __webpack_require__(19).circularClone;
+var recurse = __webpack_require__(22).recurse;
+var resolver = __webpack_require__(45);
+var sw = __webpack_require__(47);
+var common = __webpack_require__(28);
+var statusCodes = __webpack_require__(48).statusCodes;
+var ourVersion = __webpack_require__(57).version;
 // TODO handle specification-extensions with plugins?
 var targetVersion = '3.0.0';
 var componentNames; // initialised in main
@@ -5055,38 +5055,32 @@ module.exports = require("react-ace");
 /* 43 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-switch");
+module.exports = require("classnames");
 
 /***/ }),
 /* 44 */
 /***/ (function(module, exports) {
 
-module.exports = require("classnames");
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports) {
-
 module.exports = require("call-me-maybe");
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
-var fs = __webpack_require__(26);
+var fs = __webpack_require__(27);
 var path = __webpack_require__(12);
 var url = __webpack_require__(5);
 var fetch = __webpack_require__(10);
 var yaml = __webpack_require__(10);
-var jptr = __webpack_require__(17).jptr;
-var recurse = __webpack_require__(21).recurse;
-var clone = __webpack_require__(18).clone;
-var deRef = __webpack_require__(47).dereference;
-var isRef = __webpack_require__(20).isRef;
-var common = __webpack_require__(27);
+var jptr = __webpack_require__(18).jptr;
+var recurse = __webpack_require__(22).recurse;
+var clone = __webpack_require__(19).clone;
+var deRef = __webpack_require__(46).dereference;
+var isRef = __webpack_require__(21).isRef;
+var common = __webpack_require__(28);
 function unique(arr) {
     return tslib_1.__spreadArrays(new Set(arr));
 }
@@ -5595,15 +5589,15 @@ module.exports = {
 
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var recurse = __webpack_require__(21).recurse;
-var clone = __webpack_require__(18).shallowClone;
-var jptr = __webpack_require__(17).jptr;
-var isRef = __webpack_require__(20).isRef;
+var recurse = __webpack_require__(22).recurse;
+var clone = __webpack_require__(19).shallowClone;
+var jptr = __webpack_require__(18).jptr;
+var isRef = __webpack_require__(21).isRef;
 var getLogger = function (options) {
     if (options && options.verbose) {
         return {
@@ -5707,7 +5701,7 @@ module.exports = {
 
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5833,12 +5827,12 @@ module.exports = {
 
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var http = __webpack_require__(50);
+var http = __webpack_require__(49);
 var ours = {
     "default": "Default response",
     "1XX": "Informational",
@@ -5855,13 +5849,13 @@ module.exports = {
 
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {var ClientRequest = __webpack_require__(51)
-var response = __webpack_require__(31)
-var extend = __webpack_require__(56)
-var statusCodes = __webpack_require__(57)
+/* WEBPACK VAR INJECTION */(function(global) {var ClientRequest = __webpack_require__(50)
+var response = __webpack_require__(32)
+var extend = __webpack_require__(55)
+var statusCodes = __webpack_require__(56)
 var url = __webpack_require__(5)
 
 var http = exports
@@ -5946,14 +5940,14 @@ http.METHODS = [
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(11)))
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer, global, process) {var capability = __webpack_require__(29)
-var inherits = __webpack_require__(30)
-var response = __webpack_require__(31)
-var stream = __webpack_require__(32)
-var toArrayBuffer = __webpack_require__(55)
+/* WEBPACK VAR INJECTION */(function(Buffer, global, process) {var capability = __webpack_require__(30)
+var inherits = __webpack_require__(31)
+var response = __webpack_require__(32)
+var stream = __webpack_require__(33)
+var toArrayBuffer = __webpack_require__(54)
 
 var IncomingMessage = response.IncomingMessage
 var rStates = response.readyStates
@@ -6277,185 +6271,185 @@ var unsafeHeaders = [
 	'via'
 ]
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(28).Buffer, __webpack_require__(11), __webpack_require__(16)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(29).Buffer, __webpack_require__(11), __webpack_require__(17)))
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports) {
 
 module.exports = require("base64-js");
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports) {
 
 module.exports = require("ieee754");
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports) {
 
 module.exports = require("isarray");
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports) {
 
 module.exports = require("to-arraybuffer");
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports) {
 
 module.exports = require("xtend");
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports) {
 
 module.exports = require("builtin-status-codes");
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"name\":\"swagger2openapi\",\"version\":\"5.3.1\",\"description\":\"Convert Swagger 2.0 definitions to OpenApi 3.0 and validate\",\"main\":\"index.js\",\"bin\":{\"swagger2openapi\":\"./swagger2openapi.js\",\"oas-validate\":\"./oas-validate.js\",\"boast\":\"./boast.js\"},\"scripts\":{\"test\":\"mocha\"},\"browserify\":{\"transform\":[[\"babelify\",{\"presets\":[\"es2015\"]}]]},\"repository\":{\"url\":\"https://github.com/Mermade/oas-kit.git\",\"type\":\"git\"},\"bugs\":{\"url\":\"https://github.com/mermade/oas-kit/issues\"},\"author\":\"Mike Ralphson <mike.ralphson@gmail.com>\",\"license\":\"BSD-3-Clause\",\"dependencies\":{\"better-ajv-errors\":\"^0.6.1\",\"call-me-maybe\":\"^1.0.1\",\"node-fetch-h2\":\"^2.3.0\",\"node-readfiles\":\"^0.2.0\",\"oas-kit-common\":\"^1.0.7\",\"oas-resolver\":\"^2.2.5\",\"oas-schema-walker\":\"^1.1.2\",\"oas-validator\":\"^3.3.1\",\"reftools\":\"^1.0.8\",\"yaml\":\"^1.3.1\",\"yargs\":\"^12.0.5\"},\"keywords\":[\"swagger\",\"openapi\",\"openapi2\",\"openapi3\",\"converter\",\"conversion\",\"validator\",\"validation\",\"resolver\",\"lint\",\"linter\"],\"gitHead\":\"bb9737783f5c8e192bdf2cc33edcaec1f7fa5720\"}");
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports) {
 
 module.exports = require("url-template");
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-bash.js");
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-c.js");
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-clike.js");
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-coffeescript.js");
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-cpp.js");
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-csharp.js");
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-go.js");
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-http.js");
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-java.js");
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-lua.js");
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-markup-templating.js");
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-markup.js");
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-objectivec.js");
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-perl.js");
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-php.js");
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-python.js");
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-ruby.js");
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-scala.js");
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-sql.js");
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-swift.js");
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-				var addMethods = __webpack_require__(81)
+				var addMethods = __webpack_require__(80)
 				var methods = ["add","done","toJS","load","search"]
 				module.exports = function() {
-					var w = new Worker(__webpack_require__.p + "e96d95208375deeddaea.worker.js", { name: "[hash].worker.js" })
+					var w = new Worker(__webpack_require__.p + "59e506e02fa3c87b4a22.worker.js", { name: "[hash].worker.js" })
 					addMethods(w, methods)
 					
 					return w
@@ -6463,7 +6457,7 @@ module.exports = require("prismjs/components/prism-swift.js");
 			
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, exports) {
 
 function addMethods(worker, methods) {
@@ -6515,13 +6509,13 @@ module.exports = addMethods;
 
 
 /***/ }),
-/* 82 */
+/* 81 */
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/es/promise");
 
 /***/ }),
-/* 83 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6617,43 +6611,43 @@ function toComment(sourceMap) {
 }
 
 /***/ }),
-/* 84 */
+/* 83 */
 /***/ (function(module, exports) {
 
 module.exports = require("brace/mode/curly");
 
 /***/ }),
-/* 85 */
+/* 84 */
 /***/ (function(module, exports) {
 
 module.exports = require("brace/mode/json");
 
 /***/ }),
-/* 86 */
+/* 85 */
 /***/ (function(module, exports) {
 
 module.exports = require("brace/theme/github");
 
 /***/ }),
-/* 87 */
+/* 86 */
 /***/ (function(module, exports) {
 
 module.exports = require("brace/theme/monokai");
 
 /***/ }),
-/* 88 */
+/* 87 */
 /***/ (function(module, exports) {
 
 module.exports = require("qs");
 
 /***/ }),
-/* 89 */
+/* 88 */
 /***/ (function(module, exports) {
 
 module.exports = require("stickyfill");
 
 /***/ }),
-/* 90 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6667,6 +6661,7 @@ var external_prop_types_ = __webpack_require__(13);
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
 // EXTERNAL MODULE: external "polished"
 var external_polished_ = __webpack_require__(2);
@@ -6989,7 +6984,7 @@ if (typeof Element !== 'undefined' && !Element.prototype.scrollIntoViewIfNeeded)
 }
 
 // EXTERNAL MODULE: external "slugify"
-var external_slugify_ = __webpack_require__(34);
+var external_slugify_ = __webpack_require__(35);
 var external_slugify_default = /*#__PURE__*/__webpack_require__.n(external_slugify_);
 
 // EXTERNAL MODULE: external "url"
@@ -7332,7 +7327,8 @@ var RedocNormalizedOptions_RedocNormalizedOptions = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: external "styled-components"
-var external_styled_components_ = __webpack_require__(35);
+var external_styled_components_ = __webpack_require__(14);
+var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
 
 // CONCATENATED MODULE: ./src/styled-components.ts
 
@@ -7413,12 +7409,12 @@ var ErrorBoundary_ErrorBoundary = /** @class */ (function (_super) {
                         external_react_["createElement"]("pre", null, this.state.error.stack))),
                 external_react_["createElement"]("small", null,
                     " ReDoc Version: ",
-                    "2.0.0-rc.23"),
+                    "2.0.0-rc.24"),
                 " ",
                 external_react_["createElement"]("br", null),
                 external_react_["createElement"]("small", null,
                     " Commit: ",
-                    "a1adda23"));
+                    "0e6264a8"));
         }
         return external_react_["Children"].only(this.props.children);
     };
@@ -7538,10 +7534,10 @@ function convertSwagger2OpenAPI(spec) {
 }
 
 // EXTERNAL MODULE: external "decko"
-var external_decko_ = __webpack_require__(14);
+var external_decko_ = __webpack_require__(15);
 
 // EXTERNAL MODULE: external "eventemitter3"
-var external_eventemitter3_ = __webpack_require__(19);
+var external_eventemitter3_ = __webpack_require__(20);
 var external_eventemitter3_default = /*#__PURE__*/__webpack_require__.n(external_eventemitter3_);
 
 // EXTERNAL MODULE: external "json-pointer"
@@ -7644,7 +7640,7 @@ var path_browserify = __webpack_require__(12);
 // CONCATENATED MODULE: ./src/utils/openapi.ts
 
 
-var URLtemplate = __webpack_require__(59);
+var URLtemplate = __webpack_require__(58);
 
 
 function isWildcardStatusCode(statusCode) {
@@ -8125,64 +8121,64 @@ function pluralizeType(displayType) {
 var external_prismjs_ = __webpack_require__(9);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-bash.js"
-var prism_bash_js_ = __webpack_require__(60);
+var prism_bash_js_ = __webpack_require__(59);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-c.js"
-var prism_c_js_ = __webpack_require__(61);
+var prism_c_js_ = __webpack_require__(60);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-clike.js"
-var prism_clike_js_ = __webpack_require__(62);
+var prism_clike_js_ = __webpack_require__(61);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-coffeescript.js"
-var prism_coffeescript_js_ = __webpack_require__(63);
+var prism_coffeescript_js_ = __webpack_require__(62);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-cpp.js"
-var prism_cpp_js_ = __webpack_require__(64);
+var prism_cpp_js_ = __webpack_require__(63);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-csharp.js"
-var prism_csharp_js_ = __webpack_require__(65);
+var prism_csharp_js_ = __webpack_require__(64);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-go.js"
-var prism_go_js_ = __webpack_require__(66);
+var prism_go_js_ = __webpack_require__(65);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-http.js"
-var prism_http_js_ = __webpack_require__(67);
+var prism_http_js_ = __webpack_require__(66);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-java.js"
-var prism_java_js_ = __webpack_require__(68);
+var prism_java_js_ = __webpack_require__(67);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-lua.js"
-var prism_lua_js_ = __webpack_require__(69);
+var prism_lua_js_ = __webpack_require__(68);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-markup-templating.js"
-var prism_markup_templating_js_ = __webpack_require__(70);
+var prism_markup_templating_js_ = __webpack_require__(69);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-markup.js"
-var prism_markup_js_ = __webpack_require__(71);
+var prism_markup_js_ = __webpack_require__(70);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-objectivec.js"
-var prism_objectivec_js_ = __webpack_require__(72);
+var prism_objectivec_js_ = __webpack_require__(71);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-perl.js"
-var prism_perl_js_ = __webpack_require__(73);
+var prism_perl_js_ = __webpack_require__(72);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-php.js"
-var prism_php_js_ = __webpack_require__(74);
+var prism_php_js_ = __webpack_require__(73);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-python.js"
-var prism_python_js_ = __webpack_require__(75);
+var prism_python_js_ = __webpack_require__(74);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-ruby.js"
-var prism_ruby_js_ = __webpack_require__(76);
+var prism_ruby_js_ = __webpack_require__(75);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-scala.js"
-var prism_scala_js_ = __webpack_require__(77);
+var prism_scala_js_ = __webpack_require__(76);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-sql.js"
-var prism_sql_js_ = __webpack_require__(78);
+var prism_sql_js_ = __webpack_require__(77);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-swift.js"
-var prism_swift_js_ = __webpack_require__(79);
+var prism_swift_js_ = __webpack_require__(78);
 
 // CONCATENATED MODULE: ./src/utils/highlight.ts
 
@@ -8419,7 +8415,7 @@ var HistoryService_history = new HistoryService_HistoryService();
 if (false) {}
 
 // EXTERNAL MODULE: external "mark.js"
-var external_mark_js_ = __webpack_require__(22);
+var external_mark_js_ = __webpack_require__(23);
 var external_mark_js_default = /*#__PURE__*/__webpack_require__.n(external_mark_js_);
 
 // CONCATENATED MODULE: ./src/services/MarkerService.ts
@@ -8474,7 +8470,7 @@ var MarkerService_MarkerService = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: external "marked"
-var external_marked_ = __webpack_require__(15);
+var external_marked_ = __webpack_require__(16);
 var external_marked_default = /*#__PURE__*/__webpack_require__.n(external_marked_);
 
 // CONCATENATED MODULE: ./src/services/MarkdownRenderer.ts
@@ -9431,7 +9427,7 @@ var Field_FieldModel = /** @class */ (function () {
 
 
 // EXTERNAL MODULE: external "openapi-sampler"
-var external_openapi_sampler_ = __webpack_require__(23);
+var external_openapi_sampler_ = __webpack_require__(24);
 
 // CONCATENATED MODULE: ./src/services/models/Example.ts
 
@@ -10323,14 +10319,14 @@ var worker;
 if (IS_BROWSER) {
     try {
         // tslint:disable-next-line
-        worker = __webpack_require__(80);
+        worker = __webpack_require__(79);
     }
     catch (e) {
-        worker = __webpack_require__(33).default;
+        worker = __webpack_require__(34).default;
     }
 }
 else {
-    worker = __webpack_require__(33).default;
+    worker = __webpack_require__(34).default;
 }
 var SearchStore_SearchStore = /** @class */ (function () {
     function SearchStore() {
@@ -10760,11 +10756,11 @@ var StyledPre = styled_components(PrismDiv.withComponent('pre'))(samples_templat
 var samples_templateObject_1, samples_templateObject_2, samples_templateObject_3;
 
 // EXTERNAL MODULE: external "perfect-scrollbar"
-var external_perfect_scrollbar_ = __webpack_require__(24);
+var external_perfect_scrollbar_ = __webpack_require__(25);
 var external_perfect_scrollbar_default = /*#__PURE__*/__webpack_require__.n(external_perfect_scrollbar_);
 
 // EXTERNAL MODULE: ./node_modules/perfect-scrollbar/css/perfect-scrollbar.css
-var perfect_scrollbar = __webpack_require__(25);
+var perfect_scrollbar = __webpack_require__(26);
 var perfect_scrollbar_default = /*#__PURE__*/__webpack_require__.n(perfect_scrollbar);
 
 // CONCATENATED MODULE: ./src/common-elements/perfect-scrollbar.tsx
@@ -10840,7 +10836,7 @@ var input_templateObject_1;
 
 
 var Button = styled_components.button(buttons_templateObject_1 || (buttons_templateObject_1 = Object(external_tslib_["__makeTemplateObject"])(["\n  background: #248fb2;\n  border-radius: 0px;\n  border: none;\n  color: white;\n  font-size: 0.929em;\n  padding: 5px;\n"], ["\n  background: #248fb2;\n  border-radius: 0px;\n  border: none;\n  color: white;\n  font-size: 0.929em;\n  padding: 5px;\n"])));
-var SubmitButton = styled_components(Button)(buttons_templateObject_2 || (buttons_templateObject_2 = Object(external_tslib_["__makeTemplateObject"])(["\n  background: ", "\n  padding: 10px 30px;\n  border-radius: 4px;\n  cursor: pointer;\n  text-align: center;\n  outline: none;\n  margin: 1em 0;\n  min-width: 60px;\n  font-weight: bold;\n  order: 1;\n"], ["\n  background: ", "\n  padding: 10px 30px;\n  border-radius: 4px;\n  cursor: pointer;\n  text-align: center;\n  outline: none;\n  margin: 1em 0;\n  min-width: 60px;\n  font-weight: bold;\n  order: 1;\n"])), function (props) { return props.theme.colors.primary.main; });
+var SubmitButton = styled_components(Button)(buttons_templateObject_2 || (buttons_templateObject_2 = Object(external_tslib_["__makeTemplateObject"])(["\n  background: #ffc34e;\n  color: #263238;\n  padding: 10px 30px;\n  border-radius: 4px;\n  cursor: pointer;\n  text-align: center;\n  outline: none;\n  margin: 1em 0;\n  min-width: 60px;\n  font-weight: bold;\n  order: 1;\n"], ["\n  background: #ffc34e;\n  color: #263238;\n  padding: 10px 30px;\n  border-radius: 4px;\n  cursor: pointer;\n  text-align: center;\n  outline: none;\n  margin: 1em 0;\n  min-width: 60px;\n  font-weight: bold;\n  order: 1;\n"])));
 var buttons_templateObject_1, buttons_templateObject_2;
 
 // CONCATENATED MODULE: ./src/common-elements/index.ts
@@ -12717,16 +12713,16 @@ var external_react_ace_ = __webpack_require__(42);
 var external_react_ace_default = /*#__PURE__*/__webpack_require__.n(external_react_ace_);
 
 // EXTERNAL MODULE: external "brace/mode/curly"
-var curly_ = __webpack_require__(84);
+var curly_ = __webpack_require__(83);
 
 // EXTERNAL MODULE: external "brace/mode/json"
-var json_ = __webpack_require__(85);
+var json_ = __webpack_require__(84);
 
 // EXTERNAL MODULE: external "brace/theme/github"
-var github_ = __webpack_require__(86);
+var github_ = __webpack_require__(85);
 
 // EXTERNAL MODULE: external "brace/theme/monokai"
-var monokai_ = __webpack_require__(87);
+var monokai_ = __webpack_require__(86);
 
 // CONCATENATED MODULE: ./src/components/Console/ConsoleEditorWrapper.ts
 
@@ -12815,7 +12811,7 @@ function getDefaultOrFirst(object) {
 
 
 
-var qs = __webpack_require__(88);
+var qs = __webpack_require__(87);
 var cookieStorage = new external_cookie_storage_["CookieStorage"]();
 var ConsoleViewer_ConsoleViewer = /** @class */ (function (_super) {
     Object(external_tslib_["__extends"])(ConsoleViewer, _super);
@@ -13087,36 +13083,6 @@ var Endpoint_Endpoint = /** @class */ (function (_super) {
     return Endpoint;
 }(external_react_["Component"]));
 
-
-// EXTERNAL MODULE: external "react-switch"
-var external_react_switch_ = __webpack_require__(43);
-var external_react_switch_default = /*#__PURE__*/__webpack_require__.n(external_react_switch_);
-
-// CONCATENATED MODULE: ./src/common-elements/SwitchBox.tsx
-
-
-
-
-
-var CustomFlexLayout = styled_components(FlexLayout)(SwitchBox_templateObject_1 || (SwitchBox_templateObject_1 = Object(external_tslib_["__makeTemplateObject"])(["\n  align-items: center;\n"], ["\n  align-items: center;\n"])));
-var SwitchBox_Label = styled_components.label(SwitchBox_templateObject_2 || (SwitchBox_templateObject_2 = Object(external_tslib_["__makeTemplateObject"])(["\n  color: ", "\n  margin-left: 10px;\n  font-size: 120%;\n"], ["\n  color: ", "\n  margin-left: 10px;\n  font-size: 120%;\n"])), function (props) { return props.active ? props.theme.colors.success.main : props.theme.colors.text.secondary; });
-var SwitchBox_SwitchBox = /** @class */ (function (_super) {
-    Object(external_tslib_["__extends"])(SwitchBox, _super);
-    function SwitchBox() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.id = 'toggle-id-' + Date.now();
-        return _this;
-    }
-    SwitchBox.prototype.render = function () {
-        var _a = this.props, label = _a.label, checked = _a.checked, onClick = _a.onClick;
-        return external_react_["createElement"](CustomFlexLayout, null,
-            external_react_["createElement"](external_react_switch_default.a, { id: this.id, onChange: onClick, checked: checked, uncheckedIcon: false }),
-            external_react_["createElement"](SwitchBox_Label, { active: checked, htmlFor: this.id }, label));
-    };
-    return SwitchBox;
-}(external_react_["PureComponent"]));
-
-var SwitchBox_templateObject_1, SwitchBox_templateObject_2;
 
 // CONCATENATED MODULE: ./src/components/Parameters/ParametersGroup.tsx
 
@@ -13573,6 +13539,22 @@ var SecurityRequirement_SecurityRequirements = /** @class */ (function (_super) 
 
 var SecurityRequirement_templateObject_1, SecurityRequirement_templateObject_2, SecurityRequirement_templateObject_3, SecurityRequirement_templateObject_4, SecurityRequirement_templateObject_5, SecurityRequirement_templateObject_6, SecurityRequirement_templateObject_7;
 
+// CONCATENATED MODULE: ./src/common-elements/TryOutButton.tsx
+
+
+var Container = external_styled_components_default.a.div.withConfig({
+    componentId: "rg0ydr-0"
+})(["position:relative;"]);
+var TryOutButton_Button = external_styled_components_default.a.button.withConfig({
+    componentId: "rg0ydr-1"
+})(["transform:rotate(270deg);position:absolute;top:-20px;padding:10px 10px 8px 11px;border:none;background:#7147e8;color:#fff;z-index:10;cursor:pointer;font-weight:bold;font-size:0.929em;outline:none;right:", ";"], function (props) { return props.active ? "-80px" : "-54px"; });
+var TryOutButton = function (_a) {
+    var checked = _a.checked, onClick = _a.onClick;
+    return external_react_default.a.createElement(Container, null,
+        external_react_default.a.createElement(TryOutButton_Button, { active: checked, onClick: onClick }, checked ? 'SAMPLE DATA' : 'TRY IT'));
+};
+/* harmony default export */ var common_elements_TryOutButton = (TryOutButton);
+
 // CONCATENATED MODULE: ./src/components/Operation/Operation.tsx
 
 
@@ -13632,7 +13614,7 @@ var Operation_Operation = /** @class */ (function (_super) {
                     summary,
                     " ",
                     deprecated && external_react_["createElement"](Badge, { type: "warning" }, " Deprecated ")),
-                options.enableConsole && external_react_["createElement"](SwitchBox_SwitchBox, { onClick: _this.onConsoleClick, checked: _this.state.executeMode, label: "Try it out!" }),
+                options.enableConsole && external_react_["createElement"](common_elements_TryOutButton, { onClick: _this.onConsoleClick, checked: _this.state.executeMode }),
                 options.pathInMiddlePanel && external_react_["createElement"](Endpoint_Endpoint, { operation: operation, inverted: true, handleUrl: _this.onUrlChanged }),
                 hasDescription && external_react_["createElement"](Description, null,
                     description !== undefined && external_react_["createElement"](Markdown_Markdown, { source: description }),
@@ -13743,7 +13725,7 @@ var ContentItems_SectionItem = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: external "classnames"
-var external_classnames_ = __webpack_require__(44);
+var external_classnames_ = __webpack_require__(43);
 
 // CONCATENATED MODULE: ./src/components/SideMenu/styled.elements.ts
 
@@ -14001,7 +13983,7 @@ var ChevronSvg_templateObject_1;
 
 var Stickyfill;
 if (IS_BROWSER) {
-    Stickyfill = __webpack_require__(89);
+    Stickyfill = __webpack_require__(88);
 }
 var stickyfill = Stickyfill && Stickyfill();
 var StyledStickySidebar = styled_components.div(StickyResponsiveSidebar_templateObject_2 || (StickyResponsiveSidebar_templateObject_2 = Object(external_tslib_["__makeTemplateObject"])(["\n  width: ", ";\n  background-color: ", ";\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n\n  backface-visibility: hidden;\n  /* contain: strict; TODO: breaks layout since Chrome 80*/\n\n  height: 100vh;\n  position: sticky;\n  position: -webkit-sticky;\n  top: 0;\n\n  ", ";\n\n  @media print {\n    display: none;\n  }\n"], ["\n  width: ", ";\n  background-color: ", ";\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n\n  backface-visibility: hidden;\n  /* contain: strict; TODO: breaks layout since Chrome 80*/\n\n  height: 100vh;\n  position: sticky;\n  position: -webkit-sticky;\n  top: 0;\n\n  ",

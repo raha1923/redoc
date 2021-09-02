@@ -13,7 +13,6 @@ import { ExternalDocumentation } from '../ExternalDocumentation/ExternalDocument
 import { Extensions } from '../Fields/Extensions';
 import { Markdown } from '../Markdown/Markdown';
 
-import { SwitchBox } from '../../common-elements/SwitchBox';
 import { OptionsContext } from '../OptionsProvider';
 import { Parameters } from '../Parameters/Parameters';
 import { RequestSamples } from '../RequestSamples/RequestSamples';
