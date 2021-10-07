@@ -21,6 +21,11 @@ export async function loadAndBundleSpec(specUrlOrObject: object | string): Promi
   //  resolve: { http: { withCredentials: false } },
   // } as object);
 
+  // Hack to always use the domain on which redoc is being used
+  // and not to use the one provided in spec file.
+  // Specific to OpenMetadata use case.
+  v2Specs.servers[0].url = location.origin + '/api';
+
   return v2Specs;
 
 }
