@@ -6449,7 +6449,7 @@ module.exports = require("prismjs/components/prism-swift.js");
 				var addMethods = __webpack_require__(80)
 				var methods = ["add","done","toJS","load","search"]
 				module.exports = function() {
-					var w = new Worker(__webpack_require__.p + "59e506e02fa3c87b4a22.worker.js", { name: "[hash].worker.js" })
+					var w = new Worker(__webpack_require__.p + "c856a54bfa7079bc8d05.worker.js", { name: "[hash].worker.js" })
 					addMethods(w, methods)
 					
 					return w
@@ -6465,7 +6465,7 @@ function addMethods(worker, methods) {
   var callbacks = {};
   worker.addEventListener('message', function (e) {
     var d = e.data;
-    if (d.type !== 'RPC') { return; }
+    if (d.type !== 'RPC') return;
 
     if (d.id) {
       var f = callbacks[d.id];
@@ -6488,19 +6488,17 @@ function addMethods(worker, methods) {
   });
   methods.forEach(function (method) {
     worker[method] = function () {
-      var params = [], len = arguments.length;
-      while ( len-- ) params[ len ] = arguments[ len ];
-
+      var _arguments = arguments;
       return new Promise(function (a, b) {
-      var id = ++c;
-      callbacks[id] = [a, b];
-      worker.postMessage({
-        type: 'RPC',
-        id: id,
-        method: method,
-        params: params
+        var id = ++c;
+        callbacks[id] = [a, b];
+        worker.postMessage({
+          type: 'RPC',
+          id: id,
+          method: method,
+          params: [].slice.call(_arguments)
+        });
       });
-    });
     };
   });
 }
@@ -7414,7 +7412,7 @@ var ErrorBoundary_ErrorBoundary = /** @class */ (function (_super) {
                 external_react_["createElement"]("br", null),
                 external_react_["createElement"]("small", null,
                     " Commit: ",
-                    "0e6264a8"));
+                    "cbe73826"));
         }
         return external_react_["Children"].only(this.props.children);
     };
@@ -7507,13 +7505,17 @@ function loadAndBundleSpec(specUrlOrObject) {
                 case 2:
                     v2Specs = _a.sent();
                     _a.label = 3;
-                case 3: // we can derefrence the schema here for future use.
-                // import { cloneDeep } from 'lodash';
-                // const derefrencedSpec = await parser.dereference(cloneDeep(spec));
-                // const derefed = await parser.dereference(v2Specs, {
-                //  resolve: { http: { withCredentials: false } },
-                // } as object);
-                return [2 /*return*/, v2Specs];
+                case 3:
+                    // import { cloneDeep } from 'lodash';
+                    // const derefrencedSpec = await parser.dereference(cloneDeep(spec));
+                    // const derefed = await parser.dereference(v2Specs, {
+                    //  resolve: { http: { withCredentials: false } },
+                    // } as object);
+                    // Hack to always use the domain on which redoc is being used
+                    // and not to use the one provided in spec file.
+                    // Specific to OpenMetadata use case.
+                    v2Specs.servers[0].url = location.origin + '/api';
+                    return [2 /*return*/, v2Specs];
             }
         });
     });
@@ -13726,6 +13728,7 @@ var ContentItems_SectionItem = /** @class */ (function (_super) {
 
 // EXTERNAL MODULE: external "classnames"
 var external_classnames_ = __webpack_require__(43);
+var external_classnames_default = /*#__PURE__*/__webpack_require__.n(external_classnames_);
 
 // CONCATENATED MODULE: ./src/components/SideMenu/styled.elements.ts
 
@@ -13735,7 +13738,7 @@ var external_classnames_ = __webpack_require__(43);
 
 var OperationBadge = styled_components.span.attrs(function (props) { return ({
     className: "operation-type " + props.type
-}); })(SideMenu_styled_elements_templateObject_1 || (SideMenu_styled_elements_templateObject_1 = Object(external_tslib_["__makeTemplateObject"])(["\n  width: 32px;\n  display: inline-block;\n  height: ", ";\n  line-height: ", ";\n  background-color: #333;\n  border-radius: 3px;\n  background-repeat: no-repeat;\n  background-position: 6px 4px;\n  font-size: 7px;\n  font-family: Verdana; // web-safe\n  color: white;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: bold;\n  vertical-align: middle;\n  margin-right: 6px;\n  margin-top: 2px;\n\n  &.get {\n    background-color: ", ";\n  }\n\n  &.post {\n    background-color: ", ";\n  }\n\n  &.put {\n    background-color: ", ";\n  }\n\n  &.options {\n    background-color: ", ";\n  }\n\n  &.patch {\n    background-color: ", ";\n  }\n\n  &.delete {\n    background-color: ", ";\n  }\n\n  &.basic {\n    background-color: ", ";\n  }\n\n  &.link {\n    background-color: ", ";\n  }\n\n  &.head {\n    background-color: ", ";\n  }\n"], ["\n  width: 32px;\n  display: inline-block;\n  height: ", ";\n  line-height: ", ";\n  background-color: #333;\n  border-radius: 3px;\n  background-repeat: no-repeat;\n  background-position: 6px 4px;\n  font-size: 7px;\n  font-family: Verdana; // web-safe\n  color: white;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: bold;\n  vertical-align: middle;\n  margin-right: 6px;\n  margin-top: 2px;\n\n  &.get {\n    background-color: ", ";\n  }\n\n  &.post {\n    background-color: ", ";\n  }\n\n  &.put {\n    background-color: ", ";\n  }\n\n  &.options {\n    background-color: ", ";\n  }\n\n  &.patch {\n    background-color: ", ";\n  }\n\n  &.delete {\n    background-color: ", ";\n  }\n\n  &.basic {\n    background-color: ", ";\n  }\n\n  &.link {\n    background-color: ", ";\n  }\n\n  &.head {\n    background-color: ", ";\n  }\n"])), function (props) { return props.theme.typography.code.fontSize; }, function (props) { return props.theme.typography.code.fontSize; }, function (props) { return props.theme.colors.http.get; }, function (props) { return props.theme.colors.http.post; }, function (props) { return props.theme.colors.http.put; }, function (props) { return props.theme.colors.http.options; }, function (props) { return props.theme.colors.http.patch; }, function (props) { return props.theme.colors.http.delete; }, function (props) { return props.theme.colors.http.basic; }, function (props) { return props.theme.colors.http.link; }, function (props) { return props.theme.colors.http.head; });
+}); })(SideMenu_styled_elements_templateObject_1 || (SideMenu_styled_elements_templateObject_1 = Object(external_tslib_["__makeTemplateObject"])(["\n  width: 32px;\n  display: inline-block;\n  height: ", ";\n  line-height: ", ";\n  background-color: #333;\n  border-radius: 3px;\n  background-repeat: no-repeat;\n  background-position: 6px 4px;\n  font-size: 7px;\n  font-family: Verdana;\n  color: white;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: bold;\n  vertical-align: middle;\n  margin-right: 6px;\n  margin-top: 2px;\n\n  &.get {\n    background-color: ", ";\n  }\n\n  &.post {\n    background-color: ", ";\n  }\n\n  &.put {\n    background-color: ", ";\n  }\n\n  &.options {\n    background-color: ", ";\n  }\n\n  &.patch {\n    background-color: ", ";\n  }\n\n  &.delete {\n    background-color: ", ";\n  }\n\n  &.basic {\n    background-color: ", ";\n  }\n\n  &.link {\n    background-color: ", ";\n  }\n\n  &.head {\n    background-color: ", ";\n  }\n"], ["\n  width: 32px;\n  display: inline-block;\n  height: ", ";\n  line-height: ", ";\n  background-color: #333;\n  border-radius: 3px;\n  background-repeat: no-repeat;\n  background-position: 6px 4px;\n  font-size: 7px;\n  font-family: Verdana;\n  color: white;\n  text-transform: uppercase;\n  text-align: center;\n  font-weight: bold;\n  vertical-align: middle;\n  margin-right: 6px;\n  margin-top: 2px;\n\n  &.get {\n    background-color: ", ";\n  }\n\n  &.post {\n    background-color: ", ";\n  }\n\n  &.put {\n    background-color: ", ";\n  }\n\n  &.options {\n    background-color: ", ";\n  }\n\n  &.patch {\n    background-color: ", ";\n  }\n\n  &.delete {\n    background-color: ", ";\n  }\n\n  &.basic {\n    background-color: ", ";\n  }\n\n  &.link {\n    background-color: ", ";\n  }\n\n  &.head {\n    background-color: ", ";\n  }\n"])), function (props) { return props.theme.typography.code.fontSize; }, function (props) { return props.theme.typography.code.fontSize; }, function (props) { return props.theme.colors.http.get; }, function (props) { return props.theme.colors.http.post; }, function (props) { return props.theme.colors.http.put; }, function (props) { return props.theme.colors.http.options; }, function (props) { return props.theme.colors.http.patch; }, function (props) { return props.theme.colors.http.delete; }, function (props) { return props.theme.colors.http.basic; }, function (props) { return props.theme.colors.http.link; }, function (props) { return props.theme.colors.http.head; });
 function menuItemActiveBg(depth, _a) {
     var theme = _a.theme;
     if (depth > 1) {
@@ -13765,7 +13768,7 @@ var menuItemDepth = {
 };
 var MenuItemLabel = styled_components.label.attrs(function (props) { return ({
     role: 'menuitem',
-    className: external_classnames_('-depth' + props.depth, {
+    className: external_classnames_default()('-depth' + props.depth, {
         active: props.active
     })
 }); })(SideMenu_styled_elements_templateObject_7 || (SideMenu_styled_elements_templateObject_7 = Object(external_tslib_["__makeTemplateObject"])(["\n  cursor: pointer;\n  color: ", ";\n  margin: 0;\n  padding: 12.5px ", "px;\n  ", "\n  direction: ", ";\n  display: flex;\n  justify-content: space-between;\n  text-align: ", ";\n  font-family: ", ";\n  ", ";\n  background-color: ", ";\n\n  ", ";\n\n  &:hover {\n    background-color: ", ";\n  }\n\n  ", " {\n    height: ", ";\n    width: ", ";\n    polygon {\n      fill: ", ";\n    }\n  }\n"], ["\n  cursor: pointer;\n  color: ", ";\n  margin: 0;\n  padding: 12.5px ", "px;\n  ",

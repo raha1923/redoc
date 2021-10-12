@@ -10,15 +10,14 @@ export const MiddlePanel = styled.div<{ compact?: boolean }>`
   ${({ compact, theme }) =>
     media.lessThan('medium', true)`
     width: 100%;
-    padding: ${`${compact ? 0 : theme.spacing.sectionVertical}px ${
-      theme.spacing.sectionHorizontal
-    }px`};
+    padding: ${`${compact ? 0 : theme.spacing.sectionVertical}px ${theme.spacing.sectionHorizontal
+      }px`};
   `};
 `;
 
 export const Section = styled.div.attrs(props => ({
   [SECTION_ATTR]: props.id,
-}))<{ underlined?: boolean }>`
+})) <{ underlined?: boolean }>`
   padding: ${props => props.theme.spacing.sectionVertical}px 0;
 
   &:last-child {
@@ -62,7 +61,7 @@ export const RightPanel = styled.div`
   `};
 `;
 
-export const DarkRightPanel = styled(RightPanel)`
+export const DarkRightPanel = styled(RightPanel as any)`
   background-color: ${props => props.theme.rightPanel.backgroundColor};
 `;
 
@@ -82,6 +81,6 @@ export const FlexLayout = styled.div`
   width: 100%;
 `;
 
-export const FlexLayoutReverse = styled(FlexLayout)`
+export const FlexLayoutReverse = styled(FlexLayout as any)`
   flex-direction: row-reverse;
 `;

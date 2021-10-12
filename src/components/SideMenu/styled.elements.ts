@@ -1,4 +1,4 @@
-import * as classnames from 'classnames';
+import classnames from 'classnames';
 import { darken } from 'polished';
 
 import { deprecatedCss, ShelfIcon } from '../../common-elements';
@@ -6,7 +6,7 @@ import styled, { css } from '../../styled-components';
 
 export const OperationBadge = styled.span.attrs((props: { type: string }) => ({
   className: `operation-type ${props.type}`,
-}))<{ type: string }>`
+})) <{ type: string }>`
   width: 32px;
   display: inline-block;
   height: ${props => props.theme.typography.code.fontSize};
@@ -16,7 +16,7 @@ export const OperationBadge = styled.span.attrs((props: { type: string }) => ({
   background-repeat: no-repeat;
   background-position: 6px 4px;
   font-size: 7px;
-  font-family: Verdana; // web-safe
+  font-family: Verdana;
   color: white;
   text-transform: uppercase;
   text-align: center;
@@ -124,15 +124,15 @@ export const MenuItemLabel = styled.label.attrs((props: MenuItemLabelType) => ({
   className: classnames('-depth' + props.depth, {
     active: props.active,
   }),
-}))<MenuItemLabelType>`
+})) <MenuItemLabelType>`
   cursor: pointer;
   color: ${props => (props.active ? props.theme.menu.activeTextColor : props.theme.menu.textColor)};
   margin: 0;
   padding: 12.5px ${props => props.theme.spacing.unit * 4}px;
   ${({ depth, type, theme }) =>
     (type === 'section' && depth > 1 && 'padding-left: ' + theme.spacing.unit * 8 + 'px;') || ''}
-  direction: ${({ type, theme}) =>
-  (((['section', 'group', 'tag'].indexOf(type || '') > -1) && (theme.typography.direction === 'rtl')) ? 'rtl' : 'ltr')};
+  direction: ${({ type, theme }) =>
+    (((['section', 'group', 'tag'].indexOf(type || '') > -1) && (theme.typography.direction === 'rtl')) ? 'rtl' : 'ltr')};
   display: flex;
   justify-content: space-between;
   text-align: ${({ theme }) => (theme.typography.direction === 'rtl') ? 'right' : 'left'};

@@ -4,7 +4,7 @@ import { FlexLayout } from './index';
 
 import styled from '../styled-components';
 
-const CustomFlexLayout = styled(FlexLayout)`
+const CustomFlexLayout = styled(FlexLayout as any)`
   align-items: center;
 `;
 
