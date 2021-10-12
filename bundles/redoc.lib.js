@@ -1,7 +1,7 @@
 /*!
  * ReDoc - OpenAPI/Swagger-generated API Reference Documentation
  * -------------------------------------------------------------
- *   Version: "2.0.0-rc.24"
+ *   Version: "2.0.0-rc.25"
  *   Repo: https://github.com/Redocly/redoc
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -7407,12 +7407,12 @@ var ErrorBoundary_ErrorBoundary = /** @class */ (function (_super) {
                         external_react_["createElement"]("pre", null, this.state.error.stack))),
                 external_react_["createElement"]("small", null,
                     " ReDoc Version: ",
-                    "2.0.0-rc.24"),
+                    "2.0.0-rc.25"),
                 " ",
                 external_react_["createElement"]("br", null),
                 external_react_["createElement"]("small", null,
                     " Commit: ",
-                    "cbe73826"));
+                    "fa427315"));
         }
         return external_react_["Children"].only(this.props.children);
     };
