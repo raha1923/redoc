@@ -7412,7 +7412,7 @@ var ErrorBoundary_ErrorBoundary = /** @class */ (function (_super) {
                 external_react_["createElement"]("br", null),
                 external_react_["createElement"]("small", null,
                     " Commit: ",
-                    "42f07234"));
+                    "fb5abb9c"));
         }
         return external_react_["Children"].only(this.props.children);
     };
@@ -12921,7 +12921,7 @@ var ConsoleViewer_ConsoleViewer = /** @class */ (function (_super) {
                             myHeaders.append('X-Catalog-Source', token);
                         }
                         request = new Request(url, {
-                            method: endpoint.method,
+                            method: endpoint.method.toUpperCase(),
                             redirect: 'manual',
                             headers: myHeaders,
                             body: body ? JSON.stringify(body) : undefined
