@@ -126,7 +126,7 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
       }
 
       const request = new Request(url, {
-        method: endpoint.method,
+        method: endpoint.method.toUpperCase(),
         redirect: 'manual',
         headers: myHeaders,
         body: (body) ? JSON.stringify(body) : undefined,
