@@ -1,7 +1,7 @@
 /*!
  * ReDoc - OpenAPI/Swagger-generated API Reference Documentation
  * -------------------------------------------------------------
- *   Version: "2.0.0-rc.28"
+ *   Version: "2.0.0-rc.29"
  *   Repo: https://github.com/Redocly/redoc
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -97,7 +97,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 89);
+/******/ 	return __webpack_require__(__webpack_require__.s = 90);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1031,7 +1031,7 @@ module.exports = require("perfect-scrollbar");
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(82)(false);
+exports = module.exports = __webpack_require__(83)(false);
 // Module
 exports.push([module.i, "/*\n * Container style\n */\n.ps {\n  overflow: hidden !important;\n  overflow-anchor: none;\n  -ms-overflow-style: none;\n  touch-action: auto;\n  -ms-touch-action: auto;\n}\n\n/*\n * Scrollbar rail styles\n */\n.ps__rail-x {\n  display: none;\n  opacity: 0;\n  transition: background-color .2s linear, opacity .2s linear;\n  -webkit-transition: background-color .2s linear, opacity .2s linear;\n  height: 15px;\n  /* there must be 'bottom' or 'top' for ps__rail-x */\n  bottom: 0px;\n  /* please don't change 'position' */\n  position: absolute;\n}\n\n.ps__rail-y {\n  display: none;\n  opacity: 0;\n  transition: background-color .2s linear, opacity .2s linear;\n  -webkit-transition: background-color .2s linear, opacity .2s linear;\n  width: 15px;\n  /* there must be 'right' or 'left' for ps__rail-y */\n  right: 0;\n  /* please don't change 'position' */\n  position: absolute;\n}\n\n.ps--active-x > .ps__rail-x,\n.ps--active-y > .ps__rail-y {\n  display: block;\n  background-color: transparent;\n}\n\n.ps:hover > .ps__rail-x,\n.ps:hover > .ps__rail-y,\n.ps--focus > .ps__rail-x,\n.ps--focus > .ps__rail-y,\n.ps--scrolling-x > .ps__rail-x,\n.ps--scrolling-y > .ps__rail-y {\n  opacity: 0.6;\n}\n\n.ps .ps__rail-x:hover,\n.ps .ps__rail-y:hover,\n.ps .ps__rail-x:focus,\n.ps .ps__rail-y:focus,\n.ps .ps__rail-x.ps--clicking,\n.ps .ps__rail-y.ps--clicking {\n  background-color: #eee;\n  opacity: 0.9;\n}\n\n/*\n * Scrollbar thumb styles\n */\n.ps__thumb-x {\n  background-color: #aaa;\n  border-radius: 6px;\n  transition: background-color .2s linear, height .2s ease-in-out;\n  -webkit-transition: background-color .2s linear, height .2s ease-in-out;\n  height: 6px;\n  /* there must be 'bottom' for ps__thumb-x */\n  bottom: 2px;\n  /* please don't change 'position' */\n  position: absolute;\n}\n\n.ps__thumb-y {\n  background-color: #aaa;\n  border-radius: 6px;\n  transition: background-color .2s linear, width .2s ease-in-out;\n  -webkit-transition: background-color .2s linear, width .2s ease-in-out;\n  width: 6px;\n  /* there must be 'right' for ps__thumb-y */\n  right: 2px;\n  /* please don't change 'position' */\n  position: absolute;\n}\n\n.ps__rail-x:hover > .ps__thumb-x,\n.ps__rail-x:focus > .ps__thumb-x,\n.ps__rail-x.ps--clicking .ps__thumb-x {\n  background-color: #999;\n  height: 11px;\n}\n\n.ps__rail-y:hover > .ps__thumb-y,\n.ps__rail-y:focus > .ps__thumb-y,\n.ps__rail-y.ps--clicking .ps__thumb-y {\n  background-color: #999;\n  width: 11px;\n}\n\n/* MS supports */\n@supports (-ms-overflow-style: none) {\n  .ps {\n    overflow: auto !important;\n  }\n}\n\n@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {\n  .ps {\n    overflow: auto !important;\n  }\n}\n", ""]);
 
@@ -1040,10 +1040,16 @@ exports.push([module.i, "/*\n * Container style\n */\n.ps {\n  overflow: hidden 
 /* 27 */
 /***/ (function(module, exports) {
 
-
+module.exports = require("lodash");
 
 /***/ }),
 /* 28 */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1174,7 +1180,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17)))
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1188,9 +1194,9 @@ module.exports = {
 
 
 
-var base64 = __webpack_require__(51)
-var ieee754 = __webpack_require__(52)
-var isArray = __webpack_require__(53)
+var base64 = __webpack_require__(52)
+var ieee754 = __webpack_require__(53)
+var isArray = __webpack_require__(54)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -2971,7 +2977,7 @@ function isnan (val) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(11)))
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableStream)
@@ -3051,18 +3057,18 @@ xhr = null // Help gc
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(11)))
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = require("inherits");
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(process, Buffer, global) {var capability = __webpack_require__(30)
-var inherits = __webpack_require__(31)
-var stream = __webpack_require__(33)
+/* WEBPACK VAR INJECTION */(function(process, Buffer, global) {var capability = __webpack_require__(31)
+var inherits = __webpack_require__(32)
+var stream = __webpack_require__(34)
 
 var rStates = exports.readyStates = {
 	UNSENT: 0,
@@ -3285,16 +3291,16 @@ IncomingMessage.prototype._onXHRProgress = function () {
 	}
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(29).Buffer, __webpack_require__(11)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(30).Buffer, __webpack_require__(11)))
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = require("readable-stream");
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3312,7 +3318,7 @@ __webpack_require__.r(__webpack_exports__);
 
 try {
     // tslint:disable-next-line
-    __webpack_require__(81); // bundle into worker
+    __webpack_require__(82); // bundle into worker
 }
 catch (_) { } // nope
 /* just for better typings */
@@ -3415,29 +3421,29 @@ function search(q, limit) {
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 module.exports = require("slugify");
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 module.exports = require("json-schema-ref-parser");
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 // @ts-check
 
 var tslib_1 = __webpack_require__(1);
-var fs = __webpack_require__(27);
+var fs = __webpack_require__(28);
 var url = __webpack_require__(5);
 var pathlib = __webpack_require__(12);
-var maybe = __webpack_require__(44);
+var maybe = __webpack_require__(45);
 var fetch = __webpack_require__(10);
 var yaml = __webpack_require__(10);
 var jptr = __webpack_require__(18);
@@ -3446,11 +3452,11 @@ var isRef = __webpack_require__(21).isRef;
 var clone = __webpack_require__(19).clone;
 var cclone = __webpack_require__(19).circularClone;
 var recurse = __webpack_require__(22).recurse;
-var resolver = __webpack_require__(45);
-var sw = __webpack_require__(47);
-var common = __webpack_require__(28);
-var statusCodes = __webpack_require__(48).statusCodes;
-var ourVersion = __webpack_require__(57).version;
+var resolver = __webpack_require__(46);
+var sw = __webpack_require__(48);
+var common = __webpack_require__(29);
+var statusCodes = __webpack_require__(49).statusCodes;
+var ourVersion = __webpack_require__(58).version;
 // TODO handle specification-extensions with plugins?
 var targetVersion = '3.0.0';
 var componentNames; // initialised in main
@@ -4983,7 +4989,7 @@ module.exports = {
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5028,49 +5034,49 @@ module.exports = memoizeOne;
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dropdown");
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 module.exports = require("dompurify");
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 module.exports = require("cookie-storage");
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-ace");
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 module.exports = require("classnames");
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports) {
 
 module.exports = require("call-me-maybe");
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var tslib_1 = __webpack_require__(1);
-var fs = __webpack_require__(27);
+var fs = __webpack_require__(28);
 var path = __webpack_require__(12);
 var url = __webpack_require__(5);
 var fetch = __webpack_require__(10);
@@ -5078,9 +5084,9 @@ var yaml = __webpack_require__(10);
 var jptr = __webpack_require__(18).jptr;
 var recurse = __webpack_require__(22).recurse;
 var clone = __webpack_require__(19).clone;
-var deRef = __webpack_require__(46).dereference;
+var deRef = __webpack_require__(47).dereference;
 var isRef = __webpack_require__(21).isRef;
-var common = __webpack_require__(28);
+var common = __webpack_require__(29);
 function unique(arr) {
     return tslib_1.__spreadArrays(new Set(arr));
 }
@@ -5589,7 +5595,7 @@ module.exports = {
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5701,7 +5707,7 @@ module.exports = {
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5827,12 +5833,12 @@ module.exports = {
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var http = __webpack_require__(49);
+var http = __webpack_require__(50);
 var ours = {
     "default": "Default response",
     "1XX": "Informational",
@@ -5849,13 +5855,13 @@ module.exports = {
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {var ClientRequest = __webpack_require__(50)
-var response = __webpack_require__(32)
-var extend = __webpack_require__(55)
-var statusCodes = __webpack_require__(56)
+/* WEBPACK VAR INJECTION */(function(global) {var ClientRequest = __webpack_require__(51)
+var response = __webpack_require__(33)
+var extend = __webpack_require__(56)
+var statusCodes = __webpack_require__(57)
 var url = __webpack_require__(5)
 
 var http = exports
@@ -5940,14 +5946,14 @@ http.METHODS = [
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(11)))
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer, global, process) {var capability = __webpack_require__(30)
-var inherits = __webpack_require__(31)
-var response = __webpack_require__(32)
-var stream = __webpack_require__(33)
-var toArrayBuffer = __webpack_require__(54)
+/* WEBPACK VAR INJECTION */(function(Buffer, global, process) {var capability = __webpack_require__(31)
+var inherits = __webpack_require__(32)
+var response = __webpack_require__(33)
+var stream = __webpack_require__(34)
+var toArrayBuffer = __webpack_require__(55)
 
 var IncomingMessage = response.IncomingMessage
 var rStates = response.readyStates
@@ -6271,185 +6277,185 @@ var unsafeHeaders = [
 	'via'
 ]
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(29).Buffer, __webpack_require__(11), __webpack_require__(17)))
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports) {
-
-module.exports = require("base64-js");
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(30).Buffer, __webpack_require__(11), __webpack_require__(17)))
 
 /***/ }),
 /* 52 */
 /***/ (function(module, exports) {
 
-module.exports = require("ieee754");
+module.exports = require("base64-js");
 
 /***/ }),
 /* 53 */
 /***/ (function(module, exports) {
 
-module.exports = require("isarray");
+module.exports = require("ieee754");
 
 /***/ }),
 /* 54 */
 /***/ (function(module, exports) {
 
-module.exports = require("to-arraybuffer");
+module.exports = require("isarray");
 
 /***/ }),
 /* 55 */
 /***/ (function(module, exports) {
 
-module.exports = require("xtend");
+module.exports = require("to-arraybuffer");
 
 /***/ }),
 /* 56 */
 /***/ (function(module, exports) {
 
-module.exports = require("builtin-status-codes");
+module.exports = require("xtend");
 
 /***/ }),
 /* 57 */
+/***/ (function(module, exports) {
+
+module.exports = require("builtin-status-codes");
+
+/***/ }),
+/* 58 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"name\":\"swagger2openapi\",\"version\":\"5.3.1\",\"description\":\"Convert Swagger 2.0 definitions to OpenApi 3.0 and validate\",\"main\":\"index.js\",\"bin\":{\"swagger2openapi\":\"./swagger2openapi.js\",\"oas-validate\":\"./oas-validate.js\",\"boast\":\"./boast.js\"},\"scripts\":{\"test\":\"mocha\"},\"browserify\":{\"transform\":[[\"babelify\",{\"presets\":[\"es2015\"]}]]},\"repository\":{\"url\":\"https://github.com/Mermade/oas-kit.git\",\"type\":\"git\"},\"bugs\":{\"url\":\"https://github.com/mermade/oas-kit/issues\"},\"author\":\"Mike Ralphson <mike.ralphson@gmail.com>\",\"license\":\"BSD-3-Clause\",\"dependencies\":{\"better-ajv-errors\":\"^0.6.1\",\"call-me-maybe\":\"^1.0.1\",\"node-fetch-h2\":\"^2.3.0\",\"node-readfiles\":\"^0.2.0\",\"oas-kit-common\":\"^1.0.7\",\"oas-resolver\":\"^2.2.5\",\"oas-schema-walker\":\"^1.1.2\",\"oas-validator\":\"^3.3.1\",\"reftools\":\"^1.0.8\",\"yaml\":\"^1.3.1\",\"yargs\":\"^12.0.5\"},\"keywords\":[\"swagger\",\"openapi\",\"openapi2\",\"openapi3\",\"converter\",\"conversion\",\"validator\",\"validation\",\"resolver\",\"lint\",\"linter\"],\"gitHead\":\"bb9737783f5c8e192bdf2cc33edcaec1f7fa5720\"}");
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports) {
 
 module.exports = require("url-template");
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-bash.js");
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-c.js");
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-clike.js");
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-coffeescript.js");
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-cpp.js");
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-csharp.js");
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-go.js");
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-http.js");
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-java.js");
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-lua.js");
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-markup-templating.js");
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-markup.js");
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-objectivec.js");
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-perl.js");
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-php.js");
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-python.js");
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-ruby.js");
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-scala.js");
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-sql.js");
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports) {
 
 module.exports = require("prismjs/components/prism-swift.js");
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-				var addMethods = __webpack_require__(80)
+				var addMethods = __webpack_require__(81)
 				var methods = ["add","done","toJS","load","search"]
 				module.exports = function() {
-					var w = new Worker(__webpack_require__.p + "5ad2ff52f25436a3745a.worker.js", { name: "[hash].worker.js" })
+					var w = new Worker(__webpack_require__.p + "93da345a0a64422c8bc0.worker.js", { name: "[hash].worker.js" })
 					addMethods(w, methods)
 					
 					return w
@@ -6457,7 +6463,7 @@ module.exports = require("prismjs/components/prism-swift.js");
 			
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports) {
 
 function addMethods(worker, methods) {
@@ -6507,13 +6513,13 @@ module.exports = addMethods;
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/es/promise");
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6609,43 +6615,43 @@ function toComment(sourceMap) {
 }
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports) {
 
 module.exports = require("brace/mode/curly");
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports) {
 
 module.exports = require("brace/mode/json");
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports) {
 
 module.exports = require("brace/theme/github");
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports) {
 
 module.exports = require("brace/theme/monokai");
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports) {
 
 module.exports = require("qs");
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports) {
 
 module.exports = require("stickyfill");
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6982,7 +6988,7 @@ if (typeof Element !== 'undefined' && !Element.prototype.scrollIntoViewIfNeeded)
 }
 
 // EXTERNAL MODULE: external "slugify"
-var external_slugify_ = __webpack_require__(35);
+var external_slugify_ = __webpack_require__(36);
 var external_slugify_default = /*#__PURE__*/__webpack_require__.n(external_slugify_);
 
 // EXTERNAL MODULE: external "url"
@@ -7407,12 +7413,12 @@ var ErrorBoundary_ErrorBoundary = /** @class */ (function (_super) {
                         external_react_["createElement"]("pre", null, this.state.error.stack))),
                 external_react_["createElement"]("small", null,
                     " ReDoc Version: ",
-                    "2.0.0-rc.28"),
+                    "2.0.0-rc.29"),
                 " ",
                 external_react_["createElement"]("br", null),
                 external_react_["createElement"]("small", null,
                     " Commit: ",
-                    "e91b19a2"));
+                    "ffd3f927"));
         }
         return external_react_["Children"].only(this.props.children);
     };
@@ -7472,11 +7478,11 @@ var OptionsConsumer = OptionsContext.Consumer;
 var external_mobx_ = __webpack_require__(3);
 
 // EXTERNAL MODULE: external "json-schema-ref-parser"
-var external_json_schema_ref_parser_ = __webpack_require__(36);
+var external_json_schema_ref_parser_ = __webpack_require__(37);
 var external_json_schema_ref_parser_default = /*#__PURE__*/__webpack_require__.n(external_json_schema_ref_parser_);
 
 // EXTERNAL MODULE: ./node_modules/swagger2openapi/index.js
-var swagger2openapi = __webpack_require__(37);
+var swagger2openapi = __webpack_require__(38);
 
 // CONCATENATED MODULE: ./src/utils/loadAndBundleSpec.ts
 
@@ -7642,7 +7648,7 @@ var path_browserify = __webpack_require__(12);
 // CONCATENATED MODULE: ./src/utils/openapi.ts
 
 
-var URLtemplate = __webpack_require__(58);
+var URLtemplate = __webpack_require__(59);
 
 
 function isWildcardStatusCode(statusCode) {
@@ -8123,64 +8129,64 @@ function pluralizeType(displayType) {
 var external_prismjs_ = __webpack_require__(9);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-bash.js"
-var prism_bash_js_ = __webpack_require__(59);
+var prism_bash_js_ = __webpack_require__(60);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-c.js"
-var prism_c_js_ = __webpack_require__(60);
+var prism_c_js_ = __webpack_require__(61);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-clike.js"
-var prism_clike_js_ = __webpack_require__(61);
+var prism_clike_js_ = __webpack_require__(62);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-coffeescript.js"
-var prism_coffeescript_js_ = __webpack_require__(62);
+var prism_coffeescript_js_ = __webpack_require__(63);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-cpp.js"
-var prism_cpp_js_ = __webpack_require__(63);
+var prism_cpp_js_ = __webpack_require__(64);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-csharp.js"
-var prism_csharp_js_ = __webpack_require__(64);
+var prism_csharp_js_ = __webpack_require__(65);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-go.js"
-var prism_go_js_ = __webpack_require__(65);
+var prism_go_js_ = __webpack_require__(66);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-http.js"
-var prism_http_js_ = __webpack_require__(66);
+var prism_http_js_ = __webpack_require__(67);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-java.js"
-var prism_java_js_ = __webpack_require__(67);
+var prism_java_js_ = __webpack_require__(68);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-lua.js"
-var prism_lua_js_ = __webpack_require__(68);
+var prism_lua_js_ = __webpack_require__(69);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-markup-templating.js"
-var prism_markup_templating_js_ = __webpack_require__(69);
+var prism_markup_templating_js_ = __webpack_require__(70);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-markup.js"
-var prism_markup_js_ = __webpack_require__(70);
+var prism_markup_js_ = __webpack_require__(71);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-objectivec.js"
-var prism_objectivec_js_ = __webpack_require__(71);
+var prism_objectivec_js_ = __webpack_require__(72);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-perl.js"
-var prism_perl_js_ = __webpack_require__(72);
+var prism_perl_js_ = __webpack_require__(73);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-php.js"
-var prism_php_js_ = __webpack_require__(73);
+var prism_php_js_ = __webpack_require__(74);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-python.js"
-var prism_python_js_ = __webpack_require__(74);
+var prism_python_js_ = __webpack_require__(75);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-ruby.js"
-var prism_ruby_js_ = __webpack_require__(75);
+var prism_ruby_js_ = __webpack_require__(76);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-scala.js"
-var prism_scala_js_ = __webpack_require__(76);
+var prism_scala_js_ = __webpack_require__(77);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-sql.js"
-var prism_sql_js_ = __webpack_require__(77);
+var prism_sql_js_ = __webpack_require__(78);
 
 // EXTERNAL MODULE: external "prismjs/components/prism-swift.js"
-var prism_swift_js_ = __webpack_require__(78);
+var prism_swift_js_ = __webpack_require__(79);
 
 // CONCATENATED MODULE: ./src/utils/highlight.ts
 
@@ -10321,14 +10327,14 @@ var worker;
 if (IS_BROWSER) {
     try {
         // tslint:disable-next-line
-        worker = __webpack_require__(79);
+        worker = __webpack_require__(80);
     }
     catch (e) {
-        worker = __webpack_require__(34).default;
+        worker = __webpack_require__(35).default;
     }
 }
 else {
-    worker = __webpack_require__(34).default;
+    worker = __webpack_require__(35).default;
 }
 var SearchStore_SearchStore = /** @class */ (function () {
     function SearchStore() {
@@ -10437,7 +10443,7 @@ var UnderlinedHeader = styled_components.h5(headers_templateObject_6 || (headers
 var headers_templateObject_1, headers_templateObject_2, headers_templateObject_3, headers_templateObject_4, headers_templateObject_5, headers_templateObject_6;
 
 // EXTERNAL MODULE: ./node_modules/memoize-one/dist/memoize-one.cjs.js
-var memoize_one_cjs = __webpack_require__(38);
+var memoize_one_cjs = __webpack_require__(39);
 
 // CONCATENATED MODULE: ./src/components/StoreBuilder.ts
 
@@ -10681,7 +10687,7 @@ var ArrayClosingLabel = styled_components.div(schema_templateObject_5 || (schema
 var schema_templateObject_1, schema_templateObject_2, schema_templateObject_3, schema_templateObject_4, schema_templateObject_5;
 
 // EXTERNAL MODULE: external "react-dropdown"
-var external_react_dropdown_ = __webpack_require__(39);
+var external_react_dropdown_ = __webpack_require__(40);
 var external_react_dropdown_default = /*#__PURE__*/__webpack_require__.n(external_react_dropdown_);
 
 // CONCATENATED MODULE: ./src/common-elements/dropdown.ts
@@ -10870,7 +10876,7 @@ function DropdownOrLabel(props) {
 }
 
 // EXTERNAL MODULE: external "dompurify"
-var external_dompurify_ = __webpack_require__(40);
+var external_dompurify_ = __webpack_require__(41);
 
 // CONCATENATED MODULE: ./src/components/Markdown/styled.elements.tsx
 
@@ -12657,7 +12663,7 @@ var AdvancedMarkdown_AdvancedMarkdown = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: external "cookie-storage"
-var external_cookie_storage_ = __webpack_require__(41);
+var external_cookie_storage_ = __webpack_require__(42);
 
 // CONCATENATED MODULE: ./src/components/ConsoleResponse/Response.tsx
 
@@ -12711,20 +12717,20 @@ var ShowMore = styled_components.div(Response_templateObject_5 || (Response_temp
 var Response_templateObject_1, Response_templateObject_2, Response_templateObject_3, Response_templateObject_4, Response_templateObject_5;
 
 // EXTERNAL MODULE: external "react-ace"
-var external_react_ace_ = __webpack_require__(42);
+var external_react_ace_ = __webpack_require__(43);
 var external_react_ace_default = /*#__PURE__*/__webpack_require__.n(external_react_ace_);
 
 // EXTERNAL MODULE: external "brace/mode/curly"
-var curly_ = __webpack_require__(83);
+var curly_ = __webpack_require__(84);
 
 // EXTERNAL MODULE: external "brace/mode/json"
-var json_ = __webpack_require__(84);
+var json_ = __webpack_require__(85);
 
 // EXTERNAL MODULE: external "brace/theme/github"
-var github_ = __webpack_require__(85);
+var github_ = __webpack_require__(86);
 
 // EXTERNAL MODULE: external "brace/theme/monokai"
-var monokai_ = __webpack_require__(86);
+var monokai_ = __webpack_require__(87);
 
 // CONCATENATED MODULE: ./src/components/Console/ConsoleEditorWrapper.ts
 
@@ -12804,6 +12810,9 @@ function getDefaultOrFirst(object) {
     }
 }
 
+// EXTERNAL MODULE: external "lodash"
+var external_lodash_ = __webpack_require__(27);
+
 // CONCATENATED MODULE: ./src/components/Console/ConsoleViewer.tsx
 
 
@@ -12813,7 +12822,8 @@ function getDefaultOrFirst(object) {
 
 
 
-var qs = __webpack_require__(87);
+
+var qs = __webpack_require__(88);
 var cookieStorage = new external_cookie_storage_["CookieStorage"]();
 var ConsoleViewer_ConsoleViewer = /** @class */ (function (_super) {
     Object(external_tslib_["__extends"])(ConsoleViewer, _super);
@@ -12882,8 +12892,8 @@ var ConsoleViewer_ConsoleViewer = /** @class */ (function (_super) {
         return _this;
     }
     /*
-    * If we have a url like foo/bar/{uuid} uuid will be replaced with what user has typed in.
-    */
+     * If we have a url like foo/bar/{uuid} uuid will be replaced with what user has typed in.
+     */
     ConsoleViewer.prototype.addParamsToUrl = function (url, params) {
         var queryParamPrefix = '{';
         var queryParamSuffix = '}';
@@ -12901,7 +12911,7 @@ var ConsoleViewer_ConsoleViewer = /** @class */ (function (_super) {
     ConsoleViewer.prototype.invoke = function (endpoint, body, headers) {
         if (headers === void 0) { headers = {}; }
         return Object(external_tslib_["__awaiter"])(this, void 0, void 0, function () {
-            var operation, url, myHeaders, _i, _a, _b, key, value, token, request, response, content, ok, status_1, statusText, redirected, error_2;
+            var operation, url, queryParam_1, myHeaders, _i, _a, _b, key, value, token, request, response, content, ok, status_1, statusText, redirected, error_2;
             return Object(external_tslib_["__generator"])(this, function (_c) {
                 switch (_c.label) {
                     case 0:
@@ -12909,14 +12919,20 @@ var ConsoleViewer_ConsoleViewer = /** @class */ (function (_super) {
                         operation = this.props.operation;
                         url = this.addParamsToUrl(endpoint.path, operation.parameters || []);
                         if (endpoint.method.toLocaleLowerCase() === 'get') {
-                            url = url + '?' + qs.stringify(body || '');
+                            queryParam_1 = body ? Object(external_tslib_["__assign"])({}, body) : {};
+                            operation.parameters.forEach(function (para) {
+                                if (!Object(external_lodash_["isUndefined"])(para.in) && para.in === 'query' && !Object(external_lodash_["isEmpty"])(para.$value)) {
+                                    queryParam_1[para.name] = para.$value;
+                                }
+                            });
+                            url = url + '?' + qs.stringify(queryParam_1 || '');
                         }
                         myHeaders = new Headers();
                         for (_i = 0, _a = Object.entries(headers); _i < _a.length; _i++) {
                             _b = _a[_i], key = _b[0], value = _b[1];
                             myHeaders.append(key, "" + value);
                         }
-                        token = cookieStorage.getItem("oidcIdToken");
+                        token = cookieStorage.getItem('oidcIdToken');
                         if (token) {
                             myHeaders.append('X-Catalog-Source', token);
                         }
@@ -13727,7 +13743,7 @@ var ContentItems_SectionItem = /** @class */ (function (_super) {
 
 
 // EXTERNAL MODULE: external "classnames"
-var external_classnames_ = __webpack_require__(43);
+var external_classnames_ = __webpack_require__(44);
 var external_classnames_default = /*#__PURE__*/__webpack_require__.n(external_classnames_);
 
 // CONCATENATED MODULE: ./src/components/SideMenu/styled.elements.ts
@@ -13986,7 +14002,7 @@ var ChevronSvg_templateObject_1;
 
 var Stickyfill;
 if (IS_BROWSER) {
-    Stickyfill = __webpack_require__(88);
+    Stickyfill = __webpack_require__(89);
 }
 var stickyfill = Stickyfill && Stickyfill();
 var StyledStickySidebar = styled_components.div(StickyResponsiveSidebar_templateObject_2 || (StickyResponsiveSidebar_templateObject_2 = Object(external_tslib_["__makeTemplateObject"])(["\n  width: ", ";\n  background-color: ", ";\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n\n  backface-visibility: hidden;\n  /* contain: strict; TODO: breaks layout since Chrome 80*/\n\n  height: 100vh;\n  position: sticky;\n  position: -webkit-sticky;\n  top: 0;\n\n  ", ";\n\n  @media print {\n    display: none;\n  }\n"], ["\n  width: ", ";\n  background-color: ", ";\n  overflow: hidden;\n  display: flex;\n  flex-direction: column;\n\n  backface-visibility: hidden;\n  /* contain: strict; TODO: breaks layout since Chrome 80*/\n\n  height: 100vh;\n  position: sticky;\n  position: -webkit-sticky;\n  top: 0;\n\n  ",
