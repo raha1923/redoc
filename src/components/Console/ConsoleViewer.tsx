@@ -3,9 +3,15 @@ import * as React from 'react';
 import { CookieStorage } from 'cookie-storage';
 import { SubmitButton } from '../../common-elements/buttons';
 import { FlexLayoutReverse } from '../../common-elements/panels';
-import { FieldModel, OperationModel, SecuritySchemeModel, SecuritySchemesModel } from '../../services/models';
+import {
+  FieldModel,
+  OperationModel,
+  SecuritySchemeModel,
+  SecuritySchemesModel,
+} from '../../services/models';
 import { ConsoleResponse } from '../ConsoleResponse/Response';
 import { ConsoleEditor } from './ConsoleEditor';
+import { isEmpty, isUndefined } from 'lodash';
 
 const qs = require('qs');
 
@@ -42,7 +48,12 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
   }
   onClickSend = async () => {
     const ace = this.consoleEditor && this.consoleEditor.editor;
-    const { operation, securitySchemes: { schemes }, additionalHeaders = {}, urlIndex = 0 } = this.props;
+    const {
+      operation,
+      securitySchemes: { schemes },
+      additionalHeaders = {},
+      urlIndex = 0,
+    } = this.props;
 
     let value = ace && ace.editor.getValue();
 
@@ -55,7 +66,7 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
     if (value) {
       value = JSON.parse(value);
     }
-    const contentType = mediaType && mediaType.name || 'application/json';
+    const contentType = (mediaType && mediaType.name) || 'application/json';
     const contentTypeHeader = { 'Content-Type': contentType };
 
     const schemeMapper: Map<string, SecuritySchemeModel> = new Map<string, SecuritySchemeModel>();
@@ -88,15 +99,21 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
   };
 
   /*
-  * If we have a url like foo/bar/{uuid} uuid will be replaced with what user has typed in.
-  */
+   * If we have a url like foo/bar/{uuid} uuid will be replaced with what user has typed in.
+   */
   addParamsToUrl(url: string, params: FieldModel[]) {
     const queryParamPrefix = '{';
     const queryParamSuffix = '}';
 
     for (const fieldModel of params) {
-      if (url.indexOf(`${queryParamPrefix}${fieldModel.name}${queryParamSuffix}`) > -1 && fieldModel.$value.length > 0) {
-        url = url.replace(`${queryParamPrefix}${fieldModel.name}${queryParamSuffix}`, fieldModel.$value);
+      if (
+        url.indexOf(`${queryParamPrefix}${fieldModel.name}${queryParamSuffix}`) > -1 &&
+        fieldModel.$value.length > 0
+      ) {
+        url = url.replace(
+          `${queryParamPrefix}${fieldModel.name}${queryParamSuffix}`,
+          fieldModel.$value,
+        );
       }
     }
 
@@ -105,22 +122,29 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
     }
 
     return url;
-
   }
 
   async invoke(endpoint, body, headers = {}) {
     try {
       const { operation } = this.props;
       let url = this.addParamsToUrl(endpoint.path, operation.parameters || []);
+
       if (endpoint.method.toLocaleLowerCase() === 'get') {
-        url = url + '?' + qs.stringify(body || '');
+        const queryParam = body ? { ...body } : {};
+        operation.parameters.forEach(para => {
+          if (!isUndefined(para.in) && para.in === 'query' && !isEmpty(para.$value)) {
+            queryParam[para.name] = para.$value;
+          }
+        });
+
+        url = url + '?' + qs.stringify(queryParam || '');
       }
       const myHeaders = new Headers();
       for (const [key, value] of Object.entries(headers)) {
         myHeaders.append(key, `${value}`);
       }
 
-      const token = cookieStorage.getItem("oidcIdToken");
+      const token = cookieStorage.getItem('oidcIdToken');
       if (token) {
         myHeaders.append('X-Catalog-Source', token);
       }
@@ -129,7 +153,7 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
         method: endpoint.method.toUpperCase(),
         redirect: 'manual',
         headers: myHeaders,
-        body: (body) ? JSON.stringify(body) : undefined,
+        body: body ? JSON.stringify(body) : undefined,
       });
 
       const response = await fetch(request);
@@ -144,18 +168,18 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
         headers: response.headers,
         url: response.url,
       };
-
     } catch (error) {
       console.error(error);
     }
-
   }
 
   render() {
     const { operation } = this.props;
-    const requestBodyContent = operation.requestBody && operation.requestBody.content && operation.requestBody.content;
+    const requestBodyContent =
+      operation.requestBody && operation.requestBody.content && operation.requestBody.content;
     const hasBodySample = requestBodyContent && requestBodyContent.hasSample;
-    const mediaTypes = (requestBodyContent && requestBodyContent.mediaTypes) ? requestBodyContent.mediaTypes : [];
+    const mediaTypes =
+      requestBodyContent && requestBodyContent.mediaTypes ? requestBodyContent.mediaTypes : [];
     const { result } = this.state;
     return (
       <div>
@@ -167,11 +191,9 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
           />
         )}
         <FlexLayoutReverse>
-          <SubmitButton onClick={this.onClickSend} >Send Request</SubmitButton>
+          <SubmitButton onClick={this.onClickSend}>Send Request</SubmitButton>
         </FlexLayoutReverse>
-        {result &&
-          <ConsoleResponse response={result} />
-        }
+        {result && <ConsoleResponse response={result} />}
       </div>
     );
   }
