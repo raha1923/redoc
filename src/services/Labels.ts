@@ -4,6 +4,7 @@ export interface LabelsConfig {
   enumArray: string;
   default: string;
   deprecated: string;
+  noResultsFound: string;
   example: string;
   nullable: string;
   recursive: string;
@@ -18,6 +19,7 @@ const labels: LabelsConfig = {
   enumArray: 'Items',
   default: 'Default',
   deprecated: 'Deprecated',
+  noResultsFound: 'No results found',
   example: 'Example',
   nullable: 'Nullable',
   recursive: 'Recursive',

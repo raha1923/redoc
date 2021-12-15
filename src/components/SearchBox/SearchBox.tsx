@@ -7,6 +7,7 @@ import { MenuItem } from '../SideMenu/MenuItem';
 import { MarkerService } from '../../services/MarkerService';
 import { SearchResult } from '../../services/SearchWorker.worker';
 
+import { bind, debounce } from 'decko';
 import { PerfectScrollbarWrap } from '../../common-elements/perfect-scrollbar';
 import {
   ClearIcon,
@@ -15,6 +16,7 @@ import {
   SearchResultsBox,
   SearchWrap,
 } from './styled.elements';
+import { l } from '../../services/Labels';
 
 export interface SearchBoxProps {
   search: SearchStore<string>;
@@ -27,6 +29,7 @@ export interface SearchBoxProps {
 
 export interface SearchBoxState {
   results: SearchResult[];
+  noResults: boolean;
   term: string;
   activeItemIdx: number;
 }
@@ -38,6 +41,7 @@ export class SearchBox extends React.PureComponent<SearchBoxProps, SearchBoxStat
     super(props);
     this.state = {
       results: [],
+      noResults: false,
       term: '',
       activeItemIdx: -1,
     };
@@ -46,6 +50,7 @@ export class SearchBox extends React.PureComponent<SearchBoxProps, SearchBoxStat
   clearResults(term: string) {
     this.setState({
       results: [],
+      noResults: false,
       term,
     });
     this.props.marker.unmark();
@@ -54,6 +59,7 @@ export class SearchBox extends React.PureComponent<SearchBoxProps, SearchBoxStat
   clear = () => {
     this.setState({
       results: [],
+      noResults: false,
       term: '',
       activeItemIdx: -1,
     });
@@ -94,9 +100,17 @@ export class SearchBox extends React.PureComponent<SearchBoxProps, SearchBoxStat
   setResults(results: SearchResult[], term: string) {
     this.setState({
       results,
-      term,
+      noResults: results.length === 0,
     });
     this.props.marker.mark(term);
+  }
+
+  @bind
+  @debounce(400)
+  searchCallback(searchTerm: string) {
+    this.props.search.search(searchTerm).then(res => {
+      this.setResults(res, searchTerm);
+    });
   }
 
   search = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -106,13 +120,12 @@ export class SearchBox extends React.PureComponent<SearchBoxProps, SearchBoxStat
       return;
     }
 
-    this.setState({
-      term: q,
-    });
-
-    this.props.search.search(event.target.value).then(res => {
-      this.setResults(res, q);
-    });
+    this.setState(
+      {
+        term: q,
+      },
+      () => this.searchCallback(this.state.term),
+    );
   };
 
   render() {
@@ -132,6 +145,7 @@ export class SearchBox extends React.PureComponent<SearchBoxProps, SearchBoxStat
           value={this.state.term}
           onKeyDown={this.handleKeyDown}
           placeholder="Search..."
+          aria-label="Search"
           type="text"
           onChange={this.search}
         />
@@ -158,6 +172,9 @@ export class SearchBox extends React.PureComponent<SearchBoxProps, SearchBoxStat
             </SearchResultsBox>
           </PerfectScrollbarWrap>
         )}
+        {this.state.term && this.state.noResults ? (
+          <SearchResultsBox data-role="search:results">{l('noResultsFound')}</SearchResultsBox>
+        ) : null}
       </SearchWrap>
     );
   }
