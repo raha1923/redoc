@@ -146,7 +146,7 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
 
       const token = cookieStorage.getItem('oidcIdToken');
       if (token) {
-        myHeaders.append('X-Catalog-Source', token);
+        myHeaders.append('Authorization', `Bearer ${token}`);
       }
 
       const request = new Request(url, {
