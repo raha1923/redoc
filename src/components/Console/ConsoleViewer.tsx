@@ -1,6 +1,5 @@
 import { observer } from 'mobx-react';
 import * as React from 'react';
-import { CookieStorage } from 'cookie-storage';
 import { SubmitButton } from '../../common-elements/buttons';
 import { FlexLayoutReverse } from '../../common-elements/panels';
 import {
@@ -15,7 +14,6 @@ import { isEmpty, isUndefined } from 'lodash';
 
 const qs = require('qs');
 
-const cookieStorage = new CookieStorage();
 export interface ConsoleViewerProps {
   operation: OperationModel;
   additionalHeaders?: object;
@@ -144,7 +142,7 @@ export class ConsoleViewer extends React.Component<ConsoleViewerProps, ConsoleVi
         myHeaders.append(key, `${value}`);
       }
 
-      const token = cookieStorage.getItem('oidcIdToken');
+      const token = localStorage.getItem('oidcIdToken');
       if (token) {
         myHeaders.append('Authorization', `Bearer ${token}`);
       }
