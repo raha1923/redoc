@@ -65,6 +65,7 @@ export const PatternLabel = styled(FieldLabel)`
 
 export const ExampleValue = styled(FieldLabel)`
   border-radius: 2px;
+  overflow-wrap: anywhere;
   ${({ theme }) => `
     background-color: ${transparentize(0.95, theme.colors.text.primary)};
     color: ${transparentize(0.1, theme.colors.text.primary)};
@@ -83,6 +84,7 @@ export const ExtensionValue = styled(ExampleValue)``;
 
 export const ConstraintItem = styled(FieldLabel)`
   border-radius: 2px;
+  overflow-wrap: anywhere;
   ${({ theme }) => `
     background-color: ${transparentize(0.95, theme.colors.primary.light)};
     color: ${transparentize(0.1, theme.colors.primary.main)};
